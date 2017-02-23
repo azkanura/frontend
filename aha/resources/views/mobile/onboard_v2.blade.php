@@ -1,7 +1,7 @@
 @extends('template.mobile')
 @section('title','Onboard version 2')
 @section('content')
-<div class="container p-0">
+<div class="container mobile p-0">
     <div class="row illustration-container">
         <div class="col-xs-8 col-xs-offset-2">
             <img class="img-onboard" src="{{asset('public/img/illustration.svg')}}">

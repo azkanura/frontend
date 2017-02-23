@@ -11,7 +11,7 @@
     <link href="{{asset('public/css/mobile.css')}}" rel="stylesheet">
 </head>
 <body>
-    <section>
+    <section id="mobile">
         @yield('content')
     </section>
     <script src="{{asset('public/js/app.js')}}"></script>

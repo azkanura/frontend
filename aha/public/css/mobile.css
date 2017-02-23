@@ -5,6 +5,19 @@
 body{
 	font-family:RobotoMedium;
 }
+.mobile{
+	max-width: 360px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.mobile .row{
+	margin-left:0 !important;
+	margin-right:0 !important;
+}
+/*#mobile{
+	background-color: #ddd;
+}*/
 .p-0{
 	padding:0;
 }
@@ -60,7 +73,7 @@ body{
 }
 
 .onboard-nav{
-	padding: 30px 20px 10px 20px;
+	padding: 40px 20px 10px 20px;
 }
 
 .onboard-nav-item.active{
@@ -71,7 +84,7 @@ body{
 	border-top: 1px solid #939393;
 }
 .action-btn-container{
-	padding: 20px 30px;
+	padding: 10px 30px;
 }
 .action-btn{
 	text-transform: uppercase;
@@ -103,7 +116,7 @@ body{
 	text-align: center;
 }
 
-a.action-btn-v2:hover{
+a.action-btn:hover,a.action-btn-v2:hover{
 	text-decoration:none;
 	/*color: unset;*/
 }

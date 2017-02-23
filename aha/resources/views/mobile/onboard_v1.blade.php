@@ -2,7 +2,7 @@
 @extends('template.mobile')
 @section('title','Onboard version 1')
 @section('content')
-<div class="container p-0">
+<div class="container p-0 mobile">
     <div class="row">
         <div class="col-md-12 onboard-illustration">
             
