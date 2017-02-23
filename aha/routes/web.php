@@ -15,3 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('mobile/onboard-v1',function(){
+	return view('mobile.onboard_v1');
+});
+
+
+Route::get('mobile/onboard-v2',function(){
+	return view('mobile.onboard_v2');
+});
