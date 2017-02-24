@@ -73,3 +73,17 @@ $color-secondary:#c7c7c7;
 		background:url('../img/slider/slider-right.svg');
 	}
 }
+
+
+@media ( max-width:991px ){
+	.slider{
+		height:auto;
+		&_arrow{
+			display:none;
+		}
+
+		&_nav{
+			bottom:3%;
+		}
+	}	
+}
