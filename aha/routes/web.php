@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -22,4 +22,8 @@ Route::get('mobile/onboard-v1',function(){
 
 Route::get('mobile/onboard-v2',function(){
 	return view('mobile.onboard_v2');
+});
+
+Route::get('/',function(){
+	return view('index');
 });

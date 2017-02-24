@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@charset "UTF-8";
 
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -318,8 +318,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/fonts/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
-  src: url(/fonts/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1?#iefix) format("embedded-opentype"), url(/fonts/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/fonts/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/fonts/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/fonts/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760#glyphicons_halflingsregular) format("svg");
+  src: url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
