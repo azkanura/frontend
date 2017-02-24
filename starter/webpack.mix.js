@@ -11,10 +11,13 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.js(['resources/assets/js/app.js','resources/assets/js/jquery-ui.js','resources/assets/js/slider.js'], 'public/js')
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .sass('resources/assets/sass/slider.scss', 'public/css/slider.css')
+   .options({ processCssUrls: false});
 
 // var elixir = require('laravel-elixir');
+// 'resources/assets/sass/slider.scss'
 
 // elixir(function(mix){
 // 	mix.styles('bootstrap.css','public/assets/css/app.css');
