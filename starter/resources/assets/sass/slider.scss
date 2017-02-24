@@ -3,8 +3,9 @@ $color-secondary:#c7c7c7;
 
 .slider{
 	position:relative;
-	min-height:480px;
+	height:480px;
 	overflow-x:hidden;
+	overflow-y:hidden;
 	&_list{
 		width:100%;
 		height:100%;
@@ -13,9 +14,9 @@ $color-secondary:#c7c7c7;
 		margin:0;
 		&_item{
 			width: 100%;
-			min-height:480px;
+			height:100%;
 			display:none;
-
+			margin:auto;
 			&.active{
 				display:inline-block;
 				float:left;
@@ -25,7 +26,7 @@ $color-secondary:#c7c7c7;
 
 	&_nav{
 		position:absolute;
-		bottom:40px;
+		bottom:8%;
 		display:block;
 		width: 100%;
 		padding:0;
@@ -55,7 +56,7 @@ $color-secondary:#c7c7c7;
 		position:absolute;
 		width:28px;
 		height:48px;
-		top:168px;
+		top:40%;
 		margin-top:-24px;
 		cursor:pointer;
 	}
