@@ -13,10 +13,12 @@ $color-secondary:#c7c7c7;
 		margin:0;
 		&_item{
 			width: 100%;
+			min-height:480px;
 			display:none;
 
 			&.active{
 				display:inline-block;
+				float:left;
 			}
 		}
 	}
@@ -30,6 +32,7 @@ $color-secondary:#c7c7c7;
 		margin:0;
 		text-align: center;
 		&_item{
+		 	cursor:pointer;
 			display:inline-block;
 			width:10px;
 			height: 10px;
@@ -39,6 +42,7 @@ $color-secondary:#c7c7c7;
 			&.active{
 				width:16px;
 				height:16px;
+				background-color:$color-primary;
 			}
 			&:last-child{
 				margin-right:0;
@@ -51,7 +55,7 @@ $color-secondary:#c7c7c7;
 		position:absolute;
 		width:28px;
 		height:48px;
-		top:50%;
+		top:168px;
 		margin-top:-24px;
 		cursor:pointer;
 	}

@@ -2,8 +2,8 @@
 @section('title','slider')
 @section('content')
 <div class="slider">
-	<ul class="slider_list">
-		<li class="slider_list_item">
+	<div class="slider_list">
+		<div class="slider_list_item">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -11,8 +11,8 @@
 					</div>
 				</div>
 			</div>
-		</li>
-		<li class="slider_list_item active">
+		</div>
+		<div class="slider_list_item">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -20,26 +20,29 @@
 					</div>
 				</div>
 			</div>
-		</li>
-		<li class="slider_list_item">
+		</div>
+		<div class="slider_list_item">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="text-center">Hokyaaa</h1>
+						<h1 class="text-center">huaaala</h1>
 					</div>
 				</div>
 			</div>
-		</li>
-	</ul>
+		</div>
+		<div class="slider_list_item">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="text-center">Buweee</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<ul class="slider_nav">
-		<li class="slider_nav_item active">
-		</li>
-		<li class="slider_nav_item">
-		</li>
-		<li class="slider_nav_item">
-		</li>
-	</ul>
+	<div class="slider_nav">
+	</div>
 
 
 	<span class="slider_arrow slider_arrow-left"></span>
