@@ -40,13 +40,5 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="slider_nav">
-	</div>
-
-
-	<span class="slider_arrow slider_arrow-left"></span>
-	<span class="slider_arrow slider_arrow-right"></span>
-
 </div>
 @endsection

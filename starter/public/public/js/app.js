@@ -13314,6 +13314,8 @@ var effect;if($.uiBackCompat!==false){effect=$.effects.define("transfer",functio
 
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
 	var idx = 0;
+	$('.slider').append('<div class="slider_nav"></div><span class="slider_arrow slider_arrow-left"></span><span class="slider_arrow slider_arrow-right"></span>');
+
 	var activeSlide = $('.slider_list_item.active');
 	var leftArrow = $('.slider_arrow-left');
 	var rightArrow = $('.slider_arrow-right');
@@ -13338,13 +13340,8 @@ var effect;if($.uiBackCompat!==false){effect=$.effects.define("transfer",functio
 		console.log(targetSlide);
 		var currentSlide = $('.slider_list_item[data="' + idx + '"]');
 		currentSlide.hide('slide', { direction: 'right', height: '100%' }, 100);
-		// currentSlide.toggle('slide');
-		// currentSlide.fadeOut('fast');
 		currentSlide.removeClass('active');
 		targetSlide.show('slide', { direction: 'left', height: '100%' }, 100);
-		// targetSlide.toggle('slide');
-		// targetSlide.fadeIn('slow');
-
 		targetSlide.css('display', 'inline-block');
 		targetSlide.addClass('active');
 		$(this).addClass('active');
@@ -13359,13 +13356,8 @@ var effect;if($.uiBackCompat!==false){effect=$.effects.define("transfer",functio
 			targetIdx = idx - 1;
 			var targetSlide = $('.slider_list_item[data="' + targetIdx + '"]');
 			currentSlide.hide('slide', { direction: 'right', height: '100%' }, 100);
-			// currentSlide.toggle('slide');
-			// currentSlide.fadeOut('fast');
 			currentSlide.removeClass('active');
 			targetSlide.show('slide', { direction: 'left', height: '100%' }, 100);
-			// targetSlide.toggle('slide');
-			// targetSlide.fadeIn('slow');
-
 			targetSlide.addClass('active');
 			var navActive = $('.slider_nav_item[data-slide="#' + targetSlide.attr('id') + '"]');
 			navActive.siblings().removeClass('active');
@@ -13380,13 +13372,8 @@ var effect;if($.uiBackCompat!==false){effect=$.effects.define("transfer",functio
 			targetIdx = idx + 1;
 			var targetSlide = $('.slider_list_item[data="' + targetIdx + '"]');
 			currentSlide.hide('slide', { direction: 'left', height: '100%' }, 100);
-			// currentSlide.toggle('slide');
-			// currentSlide.fadeOut('fast');
 			currentSlide.removeClass('active');
 			targetSlide.show('slide', { direction: 'right', height: '100%' }, 100);
-			// targetSlide.toggle('slide');
-			// targetSlide.fadeIn('slow');
-
 			targetSlide.addClass('active');
 			var navActive = $('.slider_nav_item[data-slide="#' + targetSlide.attr('id') + '"]');
 			navActive.siblings().removeClass('active');
