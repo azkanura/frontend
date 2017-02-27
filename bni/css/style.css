@@ -661,6 +661,16 @@ body{
 		display: none;
 	}
 
+	.navbar_greeting{
+		display: none;
+
+	}
+
+	.navbar_client_name{
+		display: none;
+
+	}
+
 	.table_header{
 		font-size: 20px;
 		font-weight: 600;
@@ -680,5 +690,12 @@ body{
 		background-image: none;
 	}
 
+	.request_contact{
+		padding: 20px;
+	}
+
+	.request_info{
+		padding: 20px;
+	}
 
 }
