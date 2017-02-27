@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="369px" height="304px" viewBox="0 0 369 304" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>889E09FD-89E3-4F9D-9A61-38B0F970C490</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#73FFFD" offset="0%"></stop>
+            <stop stop-color="#2792EC" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="361" height="296" rx="6"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="News-Update" transform="translate(4.000000, 1.000000)">
+            <g id="-g-Group-3">
+                <g id="question" filter="url(#filter-1)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Mask-Copy" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                    <rect id="Rectangle" fill="#FAFAFA" mask="url(#mask-4)" x="37" y="216" width="295" height="59" rx="29.5"></rect>
+                    <text id="Amount" opacity="0.5" mask="url(#mask-4)" font-family="Lato-Regular, Lato" font-size="17.7600002" font-weight="normal" fill="#00161D">
+                        <tspan x="37" y="154">Amount</tspan>
+                    </text>
+                    <text id="PAY-INVOICES" mask="url(#mask-4)" font-family="Lato-Regular, Lato" font-size="20.7200003" font-weight="normal" fill="#02BDF2">
+                        <tspan x="121.067229" y="253">PAY INVOICES</tspan>
+                    </text>
+                    <text id="The-closest-due-date" stroke="#979797" stroke-width="0.74000001" opacity="0.5" mask="url(#mask-4)" font-family="Lato-Regular, Lato" font-size="17.7600002" font-weight="normal" fill="#00161D">
+                        <tspan x="33" y="40">The closest due date</tspan>
+                    </text>
+                    <text id="Thursday,-15-March-2" mask="url(#mask-4)" font-family="Lato-Regular, Lato" font-size="30" font-weight="normal" fill="#FAFAFA">
+                        <tspan x="33" y="72">Thursday,</tspan>
+                        <tspan x="33" y="108">15 March 2017</tspan>
+                    </text>
+                    <text id="Rp150,000,000" mask="url(#mask-4)" font-family="Lato-Regular, Lato" font-size="30" font-weight="normal" fill="#FAFAFA">
+                        <tspan x="37" y="185">Rp150,000,000</tspan>
+                    </text>
+                </g>
+                <path d="M35,197.61 L321.670651,197.61" id="Line-Copy-2" stroke="#FAFAFA" stroke-width="1.22000003" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

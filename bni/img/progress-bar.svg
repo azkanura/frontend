@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1192px" height="66px" viewBox="0 0 1192 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>D64CF013-7070-4674-A4F2-FADEB2F78F97</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#73FFFD" offset="0%"></stop>
+            <stop stop-color="#2792EC" offset="100%"></stop>
+        </linearGradient>
+        <path d="M13.2945809,28.1818182 C11.9751208,26.285903 9.78293026,25.0454545 7.30167106,25.0454545 C3.26906949,25.0454545 0,28.3219161 0,32.3636364 C0,36.4053566 3.26906949,39.6818182 7.30167106,39.6818182 C9.78293026,39.6818182 11.9751208,38.4413697 13.2945809,36.5454545 L172.110818,36.5454545 L172.110818,28.1818182 L13.2945809,28.1818182 Z" id="path-2"></path>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2.04" y="-2.04" width="176.190818" height="18.7163636">
+            <rect x="-2.04" y="23.0054545" width="176.190818" height="18.7163636" fill="white"></rect>
+            <use xlink:href="#path-2" fill="black"></use>
+        </mask>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FBDA61" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+        <path d="M185.405399,28.1818182 C184.085939,26.285903 181.893748,25.0454545 179.412489,25.0454545 C175.379887,25.0454545 172.110818,28.3219161 172.110818,32.3636364 C172.110818,36.4053566 175.379887,39.6818182 179.412489,39.6818182 C181.893748,39.6818182 184.085939,38.4413697 185.405399,36.5454545 L344.221636,36.5454545 L344.221636,28.1818182 L185.405399,28.1818182 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2.04" y="-2.04" width="176.190818" height="18.7163636">
+            <rect x="170.070818" y="23.0054545" width="176.190818" height="18.7163636" fill="white"></rect>
+            <use xlink:href="#path-5" fill="black"></use>
+        </mask>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#B4ED50" offset="0%"></stop>
+            <stop stop-color="#429321" offset="100%"></stop>
+        </linearGradient>
+        <path d="M356.473121,28.1818182 C355.153661,26.285903 352.96147,25.0454545 350.480211,25.0454545 C346.44761,25.0454545 343.17854,28.3219161 343.17854,32.3636364 C343.17854,36.4053566 346.44761,39.6818182 350.480211,39.6818182 C352.96147,39.6818182 355.153661,38.4413697 356.473121,36.5454545 L515.289358,36.5454545 L515.289358,28.1818182 L356.473121,28.1818182 Z" id="path-8"></path>
+        <mask id="mask-9" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2.04" y="-2.04" width="176.190818" height="18.7163636">
+            <rect x="341.13854" y="23.0054545" width="176.190818" height="18.7163636" fill="white"></rect>
+            <use xlink:href="#path-8" fill="black"></use>
+        </mask>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-10">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C96DD8" offset="100%"></stop>
+        </linearGradient>
+        <path d="M528.583939,28.1818182 C527.264479,26.285903 525.072288,25.0454545 522.591029,25.0454545 C518.558427,25.0454545 515.289358,28.3219161 515.289358,32.3636364 C515.289358,36.4053566 518.558427,39.6818182 522.591029,39.6818182 C525.072288,39.6818182 527.264479,38.4413697 528.583939,36.5454545 L687.400176,36.5454545 L687.400176,28.1818182 L528.583939,28.1818182 Z" id="path-11"></path>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2.04" y="-2.04" width="176.190818" height="18.7163636">
+            <rect x="513.249358" y="23.0054545" width="176.190818" height="18.7163636" fill="white"></rect>
+            <use xlink:href="#path-11" fill="black"></use>
+        </mask>
+        <path d="M695.479277,28.1818182 C694.159817,26.285903 691.967627,25.0454545 689.486368,25.0454545 C685.453766,25.0454545 682.184697,28.3219161 682.184697,32.3636364 C682.184697,36.4053566 685.453766,39.6818182 689.486368,39.6818182 C691.967627,39.6818182 694.159817,38.4413697 695.479277,36.5454545 L854.295515,36.5454545 L854.295515,28.1818182 L695.479277,28.1818182 Z" id="path-13"></path>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2.04" y="-2.04" width="176.190818" height="18.7163636">
+            <rect x="680.144697" y="23.0054545" width="176.190818" height="18.7163636" fill="white"></rect>
+            <use xlink:href="#path-13" fill="black"></use>
+        </mask>
+        <path d="M867.590095,28.1818182 C866.270635,26.285903 864.078445,25.0454545 861.597186,25.0454545 C857.564584,25.0454545 854.295515,28.3219161 854.295515,32.3636364 C854.295515,36.4053566 857.564584,39.6818182 861.597186,39.6818182 C864.078445,39.6818182 866.270635,38.4413697 867.590095,36.5454545 L1026.40633,36.5454545 L1026.40633,28.1818182 L867.590095,28.1818182 Z" id="path-15"></path>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2.04" y="-2.04" width="176.190818" height="18.7163636">
+            <rect x="852.255515" y="23.0054545" width="176.190818" height="18.7163636" fill="white"></rect>
+            <use xlink:href="#path-15" fill="black"></use>
+        </mask>
+        <path d="M1027.18376,28.1818182 C1025.8643,26.285903 1023.67211,25.0454545 1021.19085,25.0454545 C1017.15825,25.0454545 1013.88918,28.3219161 1013.88918,32.3636364 C1013.88918,36.4053566 1017.15825,39.6818182 1021.19085,39.6818182 C1023.67211,39.6818182 1025.8643,38.4413697 1027.18376,36.5454545 L1186,36.5454545 L1186,28.1818182 L1027.18376,28.1818182 Z" id="path-17"></path>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2.04" y="-2.04" width="176.190818" height="18.7163636">
+            <rect x="1011.84918" y="23.0054545" width="176.190818" height="18.7163636" fill="white"></rect>
+            <use xlink:href="#path-17" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-109.000000, -466.000000)">
+            <g id="Progress-Bar" transform="translate(112.000000, 462.000000)">
+                <g>
+                    <text id="Agreement" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="11.4740545" y="18">Agreement</tspan>
+                    </text>
+                    <text id="24-Feb" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="11.4740545" y="65.0454545">24 Feb</tspan>
+                    </text>
+                    <text id="Sprint-Zero" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="184.627968" y="18">Sprint Zero</tspan>
+                    </text>
+                    <text id="1-Mar" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="184.627968" y="65.0454545">1 Mar</tspan>
+                    </text>
+                    <text id="Feedback" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="353.609499" y="18">Feedback</tspan>
+                    </text>
+                    <text id="8-Mar" font-family="Roboto-Medium, Roboto" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="353.609499" y="65.0454545">8 Mar</tspan>
+                    </text>
+                    <text id="Sprint-01---14" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="525.720317" y="18">Sprint 01 - 14</tspan>
+                    </text>
+                    <text id="12-Mar" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="525.720317" y="65.0454545">12 Mar</tspan>
+                    </text>
+                    <text id="Usability-Test" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="682.184697" y="18">Usability Test</tspan>
+                    </text>
+                    <text id="Starts-28-Mar" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="682.184697" y="65.0454545">Starts 28 Mar</tspan>
+                    </text>
+                    <text id="UAT" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="860.55409" y="18">UA</tspan>
+                        <tspan x="860.55409" y="40">T</tspan>
+                    </text>
+                    <text id="Starts-12-Apr" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="860.55409" y="65.0454545">Starts 12 Apr</tspan>
+                    </text>
+                    <text id="Maintenance" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="1015.97537" y="18">Maintenance</tspan>
+                    </text>
+                    <text id="30-Days-After-UAT" font-family="Lato-Medium, Lato" font-size="18.36" font-weight="400" fill="#4A4A4A">
+                        <tspan x="1015.97537" y="65.0454545">30 Days After UAT</tspan>
+                    </text>
+                    <g id="-g-Combined-Shape">
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-3)" stroke-width="4.08" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="-g-Combined-Shape-Copy">
+                        <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-6)" stroke-width="4.08" xlink:href="#path-5"></use>
+                    </g>
+                    <g id="-g-Combined-Shape-Copy-2">
+                        <use fill="url(#linearGradient-7)" fill-rule="evenodd" xlink:href="#path-8"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-9)" stroke-width="4.08" xlink:href="#path-8"></use>
+                    </g>
+                    <g id="-g-Combined-Shape-Copy-3">
+                        <use fill="url(#linearGradient-10)" fill-rule="evenodd" xlink:href="#path-11"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-12)" stroke-width="4.08" xlink:href="#path-11"></use>
+                    </g>
+                    <g id="-g-Combined-Shape-Copy-5">
+                        <use fill="#9B9B9B" fill-rule="evenodd" xlink:href="#path-13"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-14)" stroke-width="4.08" xlink:href="#path-13"></use>
+                    </g>
+                    <g id="-g-Combined-Shape-Copy-6">
+                        <use fill="#9B9B9B" fill-rule="evenodd" xlink:href="#path-15"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-16)" stroke-width="4.08" xlink:href="#path-15"></use>
+                    </g>
+                    <g id="-g-Combined-Shape-Copy-7">
+                        <use fill="#9B9B9B" fill-rule="evenodd" xlink:href="#path-17"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-18)" stroke-width="4.08" xlink:href="#path-17"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

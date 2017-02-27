@@ -1,6 +1,10 @@
 @extends('template.app')
 @section('title','slider')
 @section('content')
+<div id='app'>
+	<example>
+	</example>
+</div>
 <div class="slider">
 	<div class="slider_list">
 		<div class="slider_list_item" style="background-color:#999">

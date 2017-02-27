@@ -44,12 +44,20 @@ body{
 	}
 
 	&_action{
-
+		&_btn{
+			display:inline-block;
+			float:left;
+			margin-right:20px;
+		}
 
 		&_text{
 			color:$black;
+			display:inline-block;
+			float:left;
+			line-height:4em;
 			&_link{
 				color: $dandelion-two;
+				font-weight:bold;
 				&:hover{
 					text-decoration:none;
 				}
@@ -90,13 +98,15 @@ body{
 	.onboard_action_btn{
 	 	display:block;
 	 	margin-right:0;
-	 	text-align:center
+	 	text-align:center;
+	 	width:100%;
 	 }
 	.onboard_action_text{
 	 	display:block;
 	 	padding-top:30px;
 	 	text-align:center;
 	 	line-height:3em;
+	 	width:100%;
 	 }
 
 	 .onboard_illustration{
