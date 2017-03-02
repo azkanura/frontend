@@ -871,6 +871,12 @@ table tr>td.sprint{
 	font-size: 20px;
 }
 
+.login_btn:hover,
+.login_btn:focus{
+	color: #fefefe;
+	background-color: #022f41;
+}
+
 .show_sm{
 	display: none;
 }

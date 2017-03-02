@@ -527,12 +527,61 @@
     <script src="js/scrolling-nav.js"></script>
     <script>
         $(document).ready(function(){
+
+            $(window).resize(function(){
+              var data = $('#menuToggle').attr('data');
+              var screenSize = $(window).width();
+              if (data=='close'){
+                if(screenSize<768){
+                    $('#sideMenu').css({'width':'85%'});
+                    $('#main').css({'right':'85%','left':'-85%'});
+                }
+                else if(screenSize<992){
+                    $('#sideMenu').css({'width':'70%'});
+                    $('#main').css({'right':'70%','left':'-70%'});
+                }
+                else if(screenSize<1100){
+                    $('#sideMenu').css({'width':'50%'});
+                    $('#main').css({'right':'50%','left':'-50%'});
+                }
+                else if(screenSize<1280){
+                    $('#sideMenu').css({'width':'40%'});
+                    $('#main').css({'right':'40%','left':'-40%'});
+                }
+                else{
+                    $('#sideMenu').css({'width':'37%'});
+                    $('#main').css({'right':'37%','left':'-37%'});
+                }
+              }
+            });
+
+
             $('#menuToggle').on('click',function(){
               var data = $(this).attr('data');
+              var screenSize = $(window).width();
+
               switch(data){
                 case 'open':
-                  $('#sideMenu').css({'width':'37%'});
-                  $('#main').css({'right':'37%','left':'-37%'});
+                  if(screenSize<768){
+                      $('#sideMenu').css({'width':'80%'});
+                      $('#main').css({'right':'80%','left':'-80%'});
+                  }
+                  else if(screenSize<992){
+                      $('#sideMenu').css({'width':'70%'});
+                      $('#main').css({'right':'70%','left':'-70%'});
+                  }
+                  else if(screenSize<1100){
+                      $('#sideMenu').css({'width':'50%'});
+                      $('#main').css({'right':'50%','left':'-50%'});
+                  }
+                  else if(screenSize<1280){
+                      $('#sideMenu').css({'width':'40%'});
+                      $('#main').css({'right':'40%','left':'-40%'});
+                  }
+                  else{
+                      $('#sideMenu').css({'width':'37%'});
+                      $('#main').css({'right':'37%','left':'-37%'});
+                  }
                   console.log('berhasil a');
                   $(this).css({'background':'#212943'})
                   $('#menuToggle>i').removeClass('mdi mdi-menu');
@@ -550,19 +599,24 @@
               }
             });
 
-            $('.progress_timeline_bar').click(function(){
-              // $(this).css({'background-color':'black'});
-              $(this).siblings().css({'visibility':'visible'});
-              $(this).parent().siblings().children('.progress_timeline_item_phase').css({'visibility':'hidden'});
-              $(this).parent().siblings().children('.progress_timeline_item_date').css({'visibility':'hidden'});
-            });
+            if($(window).width()<768){
+              console.log('mobile');
+              $('.progress_timeline_bar').click(function(){
+                // $(this).css({'background-color':'black'});
+                $(this).siblings().css({'visibility':'visible'});
+                $(this).parent().siblings().children('.progress_timeline_item_phase').css({'visibility':'hidden'});
+                $(this).parent().siblings().children('.progress_timeline_item_date').css({'visibility':'hidden'});
+              });
 
-            $('.progress_timeline_bar').hover(function(){
-              // $(this).css({'background-color':'black'});
-              $(this).siblings().css({'visibility':'visible'});
-              $(this).parent().siblings().children('.progress_timeline_item_phase').css({'visibility':'hidden'});
-              $(this).parent().siblings().children('.progress_timeline_item_date').css({'visibility':'hidden'});
-            });
+              $('.progress_timeline_bar').hover(function(){
+                // $(this).css({'background-color':'black'});
+                $(this).siblings().css({'visibility':'visible'});
+                $(this).parent().siblings().children('.progress_timeline_item_phase').css({'visibility':'hidden'});
+                $(this).parent().siblings().children('.progress_timeline_item_date').css({'visibility':'hidden'});
+              });
+            }
+
+
         });
     </script>
 
