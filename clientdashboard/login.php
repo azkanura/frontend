@@ -43,9 +43,11 @@
           <img class="login_logo" src="img/badr.svg">
           <h1 class="login_title">Client Dashboard</h1>
           <p class="login_caption">Sign in with your dashboard account</p>
-          <input class="form-control input_round login_input" placeholder="Enterprise ID">
-          <input class="form-control input_round login_input" placeholder="Password">
-          <input type="submit" class="btn login_btn" value="Sign in">
+          <form>
+            <input class="form-control input_round login_input" placeholder="Enterprise ID">
+            <input class="form-control input_round login_input" placeholder="Password">
+            <a href="index.php" class="btn login_btn">Sign in</a>
+          </form>
       </div>
     </div>
 

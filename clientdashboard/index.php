@@ -190,7 +190,7 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-4 progress_deadline_container hidden_sm">
                       <div class="progress_deadline">
                           <h4 class="progress_deadline_title">The closest due date</h4>
                           <h2 class="progress_deadline_content">Thursday,<br>15 March 2017</h2>
@@ -272,30 +272,37 @@
               </div>
           </div>
       </section>
+      <section class="progress_deadline show_sm">
+          <h4 class="progress_deadline_title">The closest due date</h4>
+          <h2 class="progress_deadline_content">Thursday,<br>15 March 2017</h2>
+          <h4 class="progress_deadline_title">Amount</h4>
+          <h2 class="progress_deadline_content amount">Rp 150,000,000</h2>
+          <a href="#" class="btn progress_deadline_btn">view invoice</a>
+      </section>
 
       <!-- Contact Section -->
       <section class="request">
           <div class="container-fluid">
               <div class="row">
-                  <div class="col-sm-4 request_contact">
+                  <div class="col-md-4 col-sm-6 request_contact">
                       <img class="request_contact_img" src="img/contact.png">
                       <h4 class="request_contact_title">Meet your Product-lab Manager</h4>
                       <h3 class="request_contact_text">Andika Amri</h3>
                       <p class="request_contact_small">+62 857 1876 5912</p>
 
                   </div>
-                  <div class="col-sm-8 request_info">
-                      <div class="col-md-7">
+                  <div class="col-md-8 col-sm-6 request_info">
+                      <div class="col-md-7 col-sm-6">
                           <h4 class="request_info_title">Last ticket Request</h4>
                           <h3 class="request_info_content"><i class="icon-envelope-letter request_info_icon"></i>Additional Feature in home page</h3>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-4 col-sm-4">
                           <h4 class="request_info_title">Date</h4>
                           <h3 class="request_info_content"><i class="icon-calendar request_info_icon"></i>14  Mar 2017</h3>
                       </div>
-                      <div class="col-md-1">
+                      <div class="col-md-1 col-sm-2">
                           <h4 class="request_info_title text-center">Status</h4>
-                          <h3 class="request_info_content text-center"><i class="icon-check"></i></h3>
+                          <h3 class="request_info_content text-center"><i class="icon-check checklist"></i></h3>
                       </div>
                   </div>
               </div>
@@ -308,7 +315,7 @@
                       <h2 class="section_title">See the lastest design progress</h2>
                       <p class="section_caption">We always update the most viable product trough prototype & mockup. <br>Check the live prototype that we provides or download the completed ones.*</p>
                       <div class="row">
-                          <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+                          <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
                               <a class="section_action_btn" href="#"><img src="img/playstore-btn.png"></a><a class="section_action_btn" href="#"><img src="img/appstore-btn.png"></a>
                           </div>
                       </div>
@@ -376,7 +383,7 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="col-md-12 no_padding">
+                  <div class="col-md-12">
                       <div class="panel">
                           <h3 class="table_header">
                           My Purchases
@@ -434,10 +441,10 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="col-sm-5 no_padding">
+                  <div class="col-sm-5">
                       <p class="table_pagination_text">Showing 1 to 10 of 57 entry</p>
                   </div>
-                  <div class="col-sm-7 no_padding">
+                  <div class="col-sm-7">
                       <div class="btn-group pull-right">
                         <button type="button" class="btn btn-default table_pagination_item">Previous</button>
                         <button type="button" class="btn btn-default table_pagination_item active">1</button>
@@ -474,12 +481,16 @@
                   <h4 class="menu_package">Badr Enterprise Solutions</h4>
                 </div>
                 <div class="col-md-5">
-                  <span class="menu_action_btn">
-                      <i class="mdi mdi-login-variant"></i>
-                  </span>
-                  <span class="menu_action_btn">
-                      <i class="mdi mdi-lead-pencil"></i>
-                  </span>
+                  <a href="login.php">
+                    <span class="menu_action_btn">
+                        <i class="mdi mdi-login-variant"></i>
+                    </span>
+                  </a>
+                  <a href="#">
+                    <span class="menu_action_btn">
+                        <i class="mdi mdi-lead-pencil"></i>
+                    </span>
+                  </a>
                 </div>
             </div>
         </div>
