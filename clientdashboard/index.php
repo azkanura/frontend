@@ -474,13 +474,79 @@
       </footer>
     </div>
     <aside class="side_menu" id="sideMenu">
-        <div class="menu_img_container" style="background-image:url('img/aha.svg')">
+
+        <div class="menu_img_container"
+          <?php
+              if($_GET){
+                  if($_GET["name"]){
+                  $name = $_GET["name"];
+                  switch($name){
+                      case 'ace':
+                          echo  htmlspecialchars('style=background-image:url("'.'img/ace.png'.'")');
+                          break;
+                      case 'ahaa':
+                          echo htmlspecialchars('style=background-image:url("'.'img/aha.svg'.'")');
+                          break;
+                      case 'aha':
+                          echo htmlspecialchars('style=background-image:url("'.'img/aha.svg'.'")');
+                          break;
+                      case 'bni':
+                          echo htmlspecialchars('style=background-image:url("'.'img/bni.png'.'")');
+                          break;
+                      default:
+                          echo htmlspecialchars('style=background-image:url("'.'img/b.png'.'")');
+                      }
+                   }
+                   else{
+                      echo 'style=background-image:url("'.'img/b.png'.'")';
+                   }
+              }
+              else{
+                  echo 'style=background-image:url("'.'img/b.png'.'")';
+              }
+          ?>
+        >
             <div class="main_info">
-                <div class="col-md-7">
-                  <h2 class="menu_company_name">Ahaa Apps</h2>
+              <span class="menu_close" id="menuClose">
+                  <i class="mdi mdi-close"></i>
+              </span>
+                <div class="col-md-7 col-sm-6 col-xs-6">
+                  <h2 class="menu_company_name">
+                      <?php
+                          if($_GET){
+                              if($_GET["name"]){
+                              $name = $_GET["name"];
+                              switch($name){
+                                  case 'ace':
+                                      echo 'Ace Hardware';
+                                      break;
+                                  case 'ahaa':
+                                      echo 'Ahaa';
+                                      break;
+                                  case 'aha':
+                                      echo 'Ahaa';
+                                      break;
+                                  case 'bni':
+                                      echo 'BNI Syariah';
+                                      break;
+                                  default:
+                                      echo 'Badr Interactive';
+
+                                  }
+                               }
+                               else{
+                                  echo 'Badr Interactive';
+                               }
+                          }
+                          else{
+                              echo 'Badr Interactive';
+                          }
+                      ?>
+                     Apps
+                   </h2>
                   <h4 class="menu_package">Badr Enterprise Solutions</h4>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 col-sm-6 col-xs-6">
                   <a href="login.php">
                     <span class="menu_action_btn">
                         <i class="mdi mdi-login-variant"></i>
@@ -533,8 +599,8 @@
               var screenSize = $(window).width();
               if (data=='close'){
                 if(screenSize<768){
-                    $('#sideMenu').css({'width':'85%'});
-                    $('#main').css({'right':'85%','left':'-85%'});
+                    $('#sideMenu').css({'width':'100%'});
+                    $('#main').css({'right':'100%','left':'-100%'});
                 }
                 else if(screenSize<992){
                     $('#sideMenu').css({'width':'70%'});
@@ -555,6 +621,21 @@
               }
             });
 
+            $('#menuClose').on('click',function(){
+              var data=$('#menuToggle').attr('data');
+              var screenSize = $(window).width();
+
+              if(data=='close'){
+                if(screenSize<768){
+                  $('#sideMenu').css({'width':'0'});
+                  $('#main').css({'right':'0','left':'0'});
+                  $('#menuToggle').css({'background':'#02c6f0'});
+                  $('#menuToggle>i').removeClass('mdi mdi-arrow-right');
+                  $('#menuToggle>i').addClass('mdi mdi-menu');
+                  $('#menuToggle').attr('data','open');
+                }
+              }
+            });
 
             $('#menuToggle').on('click',function(){
               var data = $(this).attr('data');
@@ -563,8 +644,8 @@
               switch(data){
                 case 'open':
                   if(screenSize<768){
-                      $('#sideMenu').css({'width':'80%'});
-                      $('#main').css({'right':'80%','left':'-80%'});
+                      $('#sideMenu').css({'width':'100%'});
+                      $('#main').css({'right':'100%','left':'-100%'});
                   }
                   else if(screenSize<992){
                       $('#sideMenu').css({'width':'70%'});
