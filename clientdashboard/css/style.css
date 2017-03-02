@@ -973,13 +973,39 @@ table tr>td.sprint{
 	}
 
 	.progress_timeline_item_phase{
+		margin-left: -30px;
+		margin-right: -30px;
+		text-align: center;
 		visibility: hidden;
 		transition: visibility .05s;
 	}
 
 	.progress_timeline_item_date{
+		margin-left: -30px;
+		margin-right: -30px;
+		text-align: center;
 		visibility: hidden;
 		transition: visibility .05s;
+	}
+
+	.progress_timeline_item:first-child .progress_timeline_item_phase{
+		margin-left: 10px;
+		margin-right: -50px;
+	}
+
+	.progress_timeline_item:first-child .progress_timeline_item_date{
+		margin-left: 10px;
+		margin-right: -50px;
+	}
+
+	.progress_timeline_item:last-child .progress_timeline_item_phase{
+		margin-right: 20px;
+		margin-left: -80px;
+	}
+
+	.progress_timeline_item:last-child .progress_timeline_item_date{
+		margin-right: 20px;
+		margin-left: -80px;
 	}
 
 	.table_header{

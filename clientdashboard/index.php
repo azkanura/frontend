@@ -540,6 +540,14 @@
             });
 
             $('.progress_timeline_bar').click(function(){
+              // $(this).css({'background-color':'black'});
+              $(this).siblings().css({'visibility':'visible'});
+              $(this).parent().siblings().children('.progress_timeline_item_phase').css({'visibility':'hidden'});
+              $(this).parent().siblings().children('.progress_timeline_item_date').css({'visibility':'hidden'});
+            });
+
+            $('.progress_timeline_bar').hover(function(){
+              // $(this).css({'background-color':'black'});
               $(this).siblings().css({'visibility':'visible'});
               $(this).parent().siblings().children('.progress_timeline_item_phase').css({'visibility':'hidden'});
               $(this).parent().siblings().children('.progress_timeline_item_date').css({'visibility':'hidden'});
