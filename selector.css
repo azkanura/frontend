@@ -1,0 +1,18 @@
+/*separate by space*/
+p [data-type~="tesss"]{
+
+}
+
+/*separate by dash*/
+p [data-type|="*-wakaka"]{
+
+}
+
+/*start with*/
+p[data-type^='acces']
+
+/*end with*/
+p[data-type$='teeess']
+
+/*if contain tess*/
+[data-type*='tess']
