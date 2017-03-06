@@ -275,27 +275,32 @@ body {
   background: transparent;
   border:2px solid #fff;
   color: #fff;
-  padding:10px;
+  padding:20px;
+  font-size: 18px;
 }
 
 .form_inquiry input{
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .form_inquiry input:last-child{
   margin-bottom: 20px;
 }
 
-.form_inquiry input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.form_inquiry input::-webkit-input-placeholder,/* Chrome/Opera/Safari */
+.form_inquiry textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #ddd;
 }
-.form_inquiry input::-moz-placeholder { /* Firefox 19+ */
+.form_inquiry input::-moz-placeholder, /* Firefox 19+ */
+.form_inquiry textarea::-moz-placeholder { /* Firefox 19+ */
   color: #ddd;
 }
-.form_inquiry input:-ms-input-placeholder { /* IE 10+ */
+.form_inquiry input:-ms-input-placeholder,/* IE 10+ */
+.form_inquiry textarea:-ms-input-placeholder { /* IE 10+ */
   color: #ddd;
 }
-.form_inquiry input:-moz-placeholder { /* Firefox 18- */
+.form_inquiry input:-moz-placeholder,/* Firefox 18- */
+.form_inquiry textarea:-moz-placeholder { /* Firefox 18- */
   color: #ddd;
 }
 
@@ -310,6 +315,19 @@ footer{
 
 }
 
+footer a:active,
+footer a:focus,
+footer a:visited,
+footer a:hover{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:active .footer_content,
+footer a:focus .footer_content,
+footer a:hover .footer_content{
+  color: rgb(252, 169, 36);
+}
 .footer_title{
   color:rgb(255, 28, 84);
   margin-bottom: 30px;
@@ -319,6 +337,23 @@ footer{
 .footer_content{
   color:#404040;
   margin-bottom: 15px;
+}
+
+.footer_icon{
+  margin-right: 10px;
+  float: left;
+  color:#fff;
+  padding-top:3px;
+  padding-bottom:3px;
+  background: -webkit-linear-gradient(310deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
+  background: -o-linear-gradient(310deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
+  background: -ms-linear-gradient(310deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
+  background: -moz-linear-gradient(310deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
+  background: linear-gradient(140deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
+  border-radius: 100%;
+  width:20px;
+  height: 20px;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
