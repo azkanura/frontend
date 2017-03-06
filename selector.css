@@ -16,3 +16,9 @@ p[data-type$='teeess']
 
 /*if contain tess*/
 [data-type*='tess']
+
+/* language selector*/
+*:lang(fr-ca){
+  background: red;
+  display: none;
+}

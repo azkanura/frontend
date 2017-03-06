@@ -195,6 +195,23 @@ body {
   width: 90%;
 }
 
+.card_link:hover,
+.card_link:active,
+.card_link:focus,
+.card_link:visited{
+  text-decoration: none;
+}
+.card_link .card{
+    box-shadow: 3px 3px 3px -3px #aaa;
+}
+.card_link:hover .card{
+    box-shadow: 5px 5px 5px -4px #999;
+}
+
+.card_link:hover .card_body{
+    color:rgb(252, 169, 36);
+}
+
 .card{
   background: #fff;
   border-radius: 3px;
