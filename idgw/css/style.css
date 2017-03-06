@@ -113,7 +113,7 @@ body {
   color: rgb(252, 169, 36);
   font-size: 18px;
   font-weight: 600;
-  padding: 14px 42px;
+  padding: 14px 30px;
   border-radius: 3px;
   text-decoration: none;
   text-transform: uppercase;
@@ -131,6 +131,9 @@ body {
   box-shadow: 0 -5px 5px -5px #505050;
   padding: 100px 0;
   background: #fafafa;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .bg_primary{
@@ -343,8 +346,9 @@ footer a:hover .footer_content{
   margin-right: 10px;
   float: left;
   color:#fff;
-  padding-top:3px;
-  padding-bottom:3px;
+  padding-top:4px;
+  padding-bottom:4px;
+  font-size: 12px;
   background: -webkit-linear-gradient(310deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
   background: -o-linear-gradient(310deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
   background: -ms-linear-gradient(310deg, rgb(252, 169, 36) 0%, rgb(253, 111, 56) 48%, rgb(254, 48, 78) 88%, rgb(255, 28, 84) 100%);
@@ -357,6 +361,7 @@ footer a:hover .footer_content{
 }
 
 @media (max-width: 767px) {
+
   .onboard_title {
     text-align: center;
   }
@@ -388,6 +393,17 @@ footer a:hover .footer_content{
     text-align: center;
     width: 100%;
     max-width: none;
+  }
+
+  .inquiry_input{
+    margin-bottom: 30px;
+  }
+
+  .footer_title{
+    margin-top: 40px;
+  }
+  div:first-child>.footer_title{
+    margin-top: 0;
   }
 }
 
