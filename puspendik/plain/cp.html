@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/cytoscape.min.js"></script>
+    <script src="js/cytoscape-edgehandles.js"></script>
+</head>
+<body>
+    <style>
+      .paragraph{
+        /*height: 160px;*/
+        /*overflow-y: scroll;*/
+      }
+      .selectable:hover{
+          background-color: yellow;
+          cursor: pointer;
+      }
+      .selected{
+          margin:5px;
+          background-color: blue;
+          border-radius:3px;
+      }
+
+      .disabled{
+          pointer-events:none;
+      }
+
+      .save{
+        display: none;
+      }
+
+      #add{
+        display: none;
+      }
+    </style>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" id="cp"></textarea>
+                    </div>
+                    <a class="btn btn-success" id="submit">Submit</a>
+                    <p class="paragraph" id="par">
+                    </p>
+                    <h3>indikator</h3>
+                    <div id="options">
+                    </div>
+                    <a id="add" class="btn btn-primary">Add</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/wz_jsgraphics.js"></script> -->
+    <script type="text/javascript">
+        $(function(){
+          var submit = $('#submit');
+          var par = $('#par');
+          var words = [];
+          var add = $('#add');
+          var opt = $('#options');
+          var optNum = 3;
+          var optIdx = 0;
+          $('#submit').on('click',function(){
+              var input = $('#cp').val().replace(/\r\n|\r|\n/g,"<br/>");
+              words = input.split(" ");
+              console.log(input);
+              for(var i=0; i<words.length; i++){
+                par.append('<span class="selectable" idx="'+i+'">'+words[i]+'</span> ');
+                par.addClass('disabled');
+              } 
+              $('#add').show();             
+          });
+
+          $(document).on('click','.selectable',function(){
+            $(this).siblings('.selected').addClass('selectable');
+            $(this).siblings('.selected').removeClass('selected');
+            $(this).removeClass('selectable');
+            $(this).addClass('selected');
+            var activeOptGroup = $('.opt-group.active');
+            $('.opt-group.active .form-group:first-child .input-option').val($(this).text());
+            // activeOptGroup.children('.input-option').val($('.selected').text());
+            console.log('berhasil');
+          });
+
+          $(document).on('click','.selected',function(){
+            $(this).removeClass('selected');
+            $(this).addClass('selectable');
+            console.log('berhasil');
+          });
+
+          add.click(function(){
+              console.log(optIdx,optNum);
+              var options ='';
+              for(var i=0;i<optNum;i++){
+                options+='<div class="form-group"><input class="col-xs-1" type="radio" name="radio['+optIdx+']" opt-idx="'+optIdx+'" '+(i==0?'checked':'')+'><div class="col-xs-11"><input class="form-control input-option" disabled></div></div>';
+              }
+              var remove='<a class="btn btn-default remove pull-right" opt-idx="'+optIdx+'">remove</a>';
+              var edit='<a class="btn btn-default edit pull-right" opt-idx="'+optIdx+'">edit</a>';
+              var save='<a class="btn btn-default save pull-right" opt-idx="'+optIdx+'">save</a>';
+              var actionBtn='<div class="row"><div class="col-xs-12">'+options+save+remove+edit+'</div></div>';
+              opt.append('<div class="row opt-group" id="optGroup['+optIdx+']" opt-idx="'+optIdx+'">'+actionBtn+'</div>');
+              optIdx++;
+          });
+
+          $(document).on('click','.edit',function(){
+            par.removeClass('disabled');
+            var parent = $(this).parents('.opt-group');
+            var parentSibling = parent.siblings('.opt-group');
+            parentSibling.removeClass('active');
+            parentSibling.find('.save').hide();
+            parentSibling.find('.edit').show();
+            parentSibling.find('.remove').show();
+
+            parentSibling.find('.input-option').attr('disabled',true);
+            parent.find('.input-option').attr('disabled',false);
+
+            parent.addClass('active');
+            $(this).hide();
+            $(this).siblings('.remove').hide();
+            $(this).siblings('.save').show();
+          });
+
+          $(document).on('click','.save',function(){
+            console.log('hahuha');
+            par.addClass('disabled');
+            var parent = $(this).parents('.opt-group');
+            parent.find('.input-option').attr('disabled',true);
+
+            parent.removeClass('active');
+            $(this).hide();
+            $(this).siblings('.edit').show();
+            $(this).siblings('.remove').show();
+          });
+
+          $(document).on('click','.remove',function(){
+              $(this).parents('[opt-idx="'+$(this).attr('opt-idx')+'"]').hide();
+          });
+
+
+        });
+
+    </script>
+</body>
+</html>

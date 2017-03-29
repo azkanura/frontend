@@ -1,0 +1,711 @@
+/* CSS untuk HEADER  */
+#header
+{
+	/*height: 680px;*/
+	background-color: #777777;
+	width:100%;
+	/*background-image:url('../images/image.png');*/
+
+}
+#header_no_img
+{
+	height: 680px;
+	background-color: #777777;
+	width:100%;
+	background-image:url('../images/image.png');
+
+}
+
+#nav
+{
+	background-color:#ededed;
+	opacity:0.8;
+	padding:0px;
+	/*position: fixed;*/
+	width: 100%
+}
+
+#nav-logo
+{
+	padding:20px;
+	display: inline-block;
+	min-width: 300px;
+	background-color: #329666;
+	text-align: center;
+}
+
+#nav-logo a
+{	
+	 text-decoration : none; 
+	 color : #fff;
+}
+
+.nav-menu
+{	
+	padding:20px;
+	display: inline-block;
+	color:#329666;
+}
+
+.nav-menu:hover
+{
+	background-color: #329666;
+	color: #ffffff;
+}
+
+#nav-flag
+{
+	text-align: center;
+	min-width: 200px;
+	display: inline-block;
+}
+
+#nav-button
+{
+	display: inline-block;
+	text-align: center;
+	padding-left:10px;
+	padding-right: 10px;
+}
+
+.btn-green
+{
+	background-color: #329666;
+	color :#ffffff;
+}
+.btn-green:hover
+{
+	color :#ffffff;
+}
+.btn-green-inverse
+{
+	background-color: #ffffff;
+	color :#24A395;
+	border-color: #329666;
+}
+
+/* END HEADER */
+
+
+/* START SECTION 2 */
+#section-2
+{
+	background-color: #efefef;
+}
+
+.section
+{
+	width: 100%;
+	margin :auto;
+	padding:40px;
+}
+
+.link-section-2
+{
+	color: #329666 !important;
+}
+
+/* END SECTION 2 */
+
+/*SECTION 3*/
+
+
+/*END SECTION 3 */
+
+/*SECTION 4*/
+#section-4
+{
+	background-color: #ffffff;
+}
+#title-section-4
+{
+	color: #329666;
+}
+
+/*END SECTION 4 */
+
+/*SECTION 5*/
+#section-5
+{
+	background-color: #ffffff;
+}
+#title-section-5
+{
+	color: #329666;
+}
+/*END SECTION 5 */
+
+/*SECTION 6*/
+#section-6
+{
+	background-color:#ededed;
+	background-image:url('../images/bg2.png');
+	background-attachment: fixed;
+	padding:30px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	color: #ffffff;
+	text-align: center;
+}
+/*SECTION 6 END */
+
+/*SECTION 7 */
+#section-7
+{
+	background-color: #f8f8f8;
+}
+.testimoni
+{	width: 90%;
+	margin: auto;
+	text-align: center;
+	background-color: #ffffff;
+	padding :40px;
+}
+.testimoni h3
+{
+	font-family: Montserrat;
+}
+
+/*END SECTION 7 */
+
+/*SETION 8 */
+#section-testimoni
+{
+	background-color: #ffffff;
+}
+/* END SECTIOn 8 */
+
+/*SECION tentang kami */
+#tentang-kami-1
+{
+	padding: 20px;
+	background-color: #329666;
+	color:#ffffff;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	font-weight: bold;
+}
+#tentang-kami-1:hover
+{
+	background-color: #3EB87D;
+}
+#tentang-kami-2
+{
+	padding: 20px;
+	background-color: #1690C4;
+	color:#ffffff;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	font-weight: bold;
+}
+#tentang-kami-2:hover
+{
+	background-color: #37AADB;
+}
+
+#tentang-kami-3
+{
+	padding: 20px;
+	background-color: #FFCC00;
+	color:#ffffff;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	font-weight: bold;
+}
+#tentang-kami-3:hover
+{
+	background-color: #FABF6B;
+}
+#konten-tentang-kami
+{
+	border:1px solid #b7b7b7;
+	position: relative;z-index: 1;
+	margin-left: -50px;
+	padding-left: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	color:#777;
+}
+#konten-tentang-kami h2
+{
+	font-family: Montserrat;
+}
+#konten-ttg-2
+{
+	display: none;
+}
+#konten-ttg-3
+{
+	display: none;
+}
+/* END TENTANG KAMI */
+
+/*START CARA KERJA */
+.bullet-number
+{
+	background-color: #329666;
+	color: #ffffff;
+	border-radius: 50%;
+	padding: 10px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+
+}
+.content-bn
+{
+	margin-left: -10px;
+	position: relative;
+	padding: 20px;
+	display: inline-block;
+	font-style: italic
+}
+/*END CARA KERJA */
+
+/* BLOG CSS */
+.title-detail-artikel
+{
+	text-align: left !important;
+}
+/* END BLOG CSS */
+
+/* SECTION DASHBOARD */
+.body-wrapper-dashboard
+{
+	background-color: #ededed;
+	width: 100%;
+	padding: 20px;
+}
+.content-dashboard
+{
+	width: 90%;
+	margin: auto;
+}
+.picture-wrap
+{
+	background-color: #125B73;
+	padding:50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.picture-wrap p
+{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.picture-wrap img
+{
+	width: 70px;
+	height: auto;
+	margin: auto;
+	min-width: 80%
+}
+
+.btn-row-3-button
+{
+	display: inline-block;
+	padding: 0px !important;
+	border-radius: 100% !important;
+	background-color: #f0ad4e;
+	width: 50px;
+	height: 50px;
+	color: #ffffff;
+}
+.title-dashboard
+{
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size:2em;
+}
+.sub-title-dashboard
+{
+	font-family: Montserrat;
+	font-size:1.2em;
+}
+.sidebar_menu_dashboard
+{
+	padding: 15px;
+	color: #329666;
+	font-family: montserrat;
+}
+.sidebar_menu_dashboard:hover
+{
+	background-color: #f8f8f8;
+}
+.sidebar_menu_dashboard.smd_active
+{
+	padding-left: 15px;
+	border-left: 3px solid #329666;
+	background-color: #f8f8f8;
+
+
+}
+
+.panel-class
+{
+	border-top: 1px solid #329666;
+	margin-top: 12px;
+}
+.panel.panel-class
+{
+	display: none;
+	padding: 10px;
+}
+
+.border.left-border-green
+{
+	background-color: #f8f8f8;
+	padding: 10px;
+	border-left: 3px solid #329666;
+}
+
+/* END SECtION DASHBOARD */
+
+
+/* START CELENGAN SAYA SECTION */
+.table.table-black-header
+{
+	background-color: #222222 !important;
+	color: #ffffff;
+}
+/* END CELENGAN SAYA SECTION*/
+
+/*404 SECTION */
+.container_404
+{
+	background-image: url('../images/404bg.png');
+	width:100%;
+	height: 640px;
+	background-attachment: fixed;
+}
+
+.content_404
+{
+	font-family: Montserrat;
+	font-weight: bold;
+	text-align: center;
+}
+/*END 404 SECTION */
+
+/*START SECTION DETAIL SINGLE KELAS */
+.hidden-donatur
+{
+	display: none;
+}
+.hidden-peserta
+{
+	display: none;
+}
+.col-peserta
+{
+	display: inline-block;
+	width: 15%;
+}
+
+/*END SECTION DETAIL SINGLE KELAS */
+
+/*START sECTION DETAIL PROFILE*/
+#header-profile
+{
+	height: 300px;
+	background-color: #777777;
+	width:100%;
+	background-image:url('../images/image.png');
+}
+.container-detail-profile
+{
+	width: 95%;
+	margin: auto;
+	padding: 20px;
+	background-color: #ffffff;
+	margin-top: 50px;
+	border-radius: 10px;
+	border: 2px solid #f0f0f0;
+}
+.container-rekomendasi-profile
+{
+	width: 95%;
+	margin: auto;
+	padding: 20px;
+	background-color: #ffffff;
+	margin-top: 50px;
+	border-radius: 10px;
+	border: 2px solid #f0f0f0;
+}
+.profile.profile-title
+{
+	text-align: center;
+}
+.profile.profile-content
+{
+	width: 90%;
+	margin: auto;
+}
+/* END VLIDASI DETAIL SINGL KELA */
+
+
+
+/*GLOBAL CSS */
+a
+{
+	text-decoration: none;
+}
+
+.title
+{
+	font-weight: 900px;
+	color :#329666 ;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom:15px;
+}
+
+.container-video
+{
+	width :100%;
+	height:390px;
+	background-color: #777777;
+}
+
+.content-section
+{
+	width: 90%;
+	margin:auto;
+}
+
+.image-thumb img
+{
+	width: 100%;
+	height: auto;
+}
+
+.image-thumb:hover
+{
+
+}
+
+.subtitle
+{
+	color: #4d4d4d;
+	text-align:center;
+}
+
+.green-column-inverse
+{
+	background-color: #ffffff;
+	border:1px solid #329666;
+}
+
+.green-column
+{
+	background-color: #329666;
+	color: #ffffff;
+}
+
+.nopadding
+{
+	padding: 0px !important;
+}
+
+.sinopsis-kelas
+{
+	padding: 20px;
+}
+
+.sinopsis-pembicara
+{
+	padding: 20px;
+}
+body
+{
+	color: #4d4d4d;
+}
+.lighttext
+{
+	font-weight: 100;
+}
+
+.line-danger
+{
+	width:100%;
+	height: 2px;
+	background-color: #d9534f;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.line-primary
+{
+	width:100%;
+	height: 2px;
+	background-color: #337ab7;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.line-warning
+{
+	width:100%;
+	height: 2px;
+	background-color: #f0ad4e;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.btn-green
+{
+	background-color: #329666;
+	padding: 20px;
+	border:0px solid #ffffff;
+	color: #ffffff;
+}
+.btn-green:hover
+{
+	color: #ffffff !important;
+	background-color: #32AA66;
+}
+
+.btn-green-inverse
+{
+	background-color: #ffffff;
+	padding: 20px;
+	border:0px solid #ffffff;
+	color: #329666;
+}
+
+p
+{
+	color: #777777;
+}
+
+body
+{
+	color: #777777;
+}
+
+.modal-title
+{
+	font-family: Montserrat;
+}
+
+.header-daftar
+{
+	background-color: #329666;
+	color: #ffffff;
+}
+
+.header-login
+{
+	background-color: #329666;
+	color: #ffffff;
+}
+.footer-daftar
+{
+	background-color: #329666;
+	color: #ffffff;
+	padding: 10px !important;
+}
+
+.text-green
+{
+	color: #329666 !important;
+}
+
+.container{
+	width: 100% !important;
+	padding: 30px;
+}
+.container-white
+{
+	background-color: #ffffff;
+}
+.green-line
+{
+	width:200px;
+	height: 1px;
+	background-color: #329666;
+}
+
+.green-line-vertical-l
+{
+	height: auto;
+	border-left:1px solid #329666;
+	padding-left: 5px;
+}
+
+.green-line-vertical-r1
+{
+	height: auto;
+	border-right:1px solid #329666;
+	padding-right: 5px;
+}
+
+.green-line-vertical-r2
+{
+	height: auto;
+	border-right:1px solid #45BA82;
+	padding-right: 5px;
+}
+.green-line-vertical-r3
+{
+	height: auto;
+	border-right:1px solid #58D197;
+	padding-right: 5px;
+}
+.green-line-vertical-r4
+{
+	height: auto;
+	border-right:1px solid #75E0AD;
+	padding-right: 5px;
+}
+.green-line-vertical-r5
+{
+	height: auto;
+	border-right:1px solid #8AF2C0;
+	padding-right: 5px;
+}
+.green-line-vertical-r6
+{
+	height: auto;
+	border-right:1px solid #A2FAD0;
+	padding-right: 5px;
+}
+.green-line-vertical-r7
+{
+	height: auto;
+	border-right:1px solid #BBFADC;
+	padding-right: 5px;
+}
+.green-line-vertical-r8
+{
+	height: auto;
+	border-right:1px solid #D4FAE8;
+	padding-right: 5px;
+}
+.green-line-vertical-r9
+{
+	height: auto;
+	border-right:1px solid #EDFAF4;
+	padding-right: 5px;
+}
+
+.panels
+{
+	padding:20px;
+}
+
+.btn-warning
+{
+	background-color: #FFCC00 !important;
+	color:#000000 !important;
+}
+/*END GLOBAL CSS */

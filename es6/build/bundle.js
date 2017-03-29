@@ -73,6 +73,10 @@
 "use strict";
 
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 // let hello="haaalllooow";
 // console.log(hello);
 //
@@ -124,11 +128,71 @@
 // },1000);
 
 
-var blastoff = function blastoff() {
-  console.log('blastofff');
-};
+// const blastoff = ()=>{
+//   console.log('blastofff');
+// }
+//
+// blastoff();
 
-blastoff();
+// this.a = 25;
+// let print = function(){
+//   this.a=50;
+//   console.log('this.a', this.a);
+// }
+//
+// print();
+
+
+// let arrowPrint = ()=>{
+//   console.log('test');
+// }
+//
+// arrowPrint();
+
+// let points = [10,20,20];
+//
+// // let addOne = function(element){
+// //   return element+1;
+// // }
+//
+// // let addOne = (element)=>{
+// //   return element+1;
+// // }
+// // points = points.map((element)=>{return element+1});
+// points = points.map(element=> element+1);
+// console.log(points);
+// let scores = [78,56,90,87,54,65,12,100,98,50,78,70,61,72,90];
+// // let isPassing = (grade)=>{
+// //   return grade >=70;
+// // }
+//
+// let passed = scores.filter(element => element>=70);
+// console.log(passed);
+//
+// let found = scores.find(element=>element>=70);
+// console.log(found);
+// import students from './students';
+// console.log(students);
+
+var Entity = function () {
+  function Entity(name, height) {
+    _classCallCheck(this, Entity);
+
+    this.name = name;
+    this.height = height;
+  }
+
+  _createClass(Entity, [{
+    key: 'greet',
+    value: function greet() {
+      console.log('hallo, i\'m ' + this.name + ', I\'m ' + this.height + ' tall');
+    }
+  }]);
+
+  return Entity;
+}();
+
+new Entity('marry', 123);
 
 /***/ }),
 /* 1 */

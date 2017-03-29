@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pembayaran</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+ 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+ 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Damion">
+	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<script src="js/myjs.js" type="text/javascript" charset="utf-8" async defer></script>
+	
+</head>
+<!--  UNTUK MENU DAFTAR DI HEADER. LIHAT BAGIAN BOOTSTRAP MODAL SECTION -> DAFTAR_MODAL-->
+<body>
+<div id="">
+		<div id="nav">
+			<div id="nav-logo"><a href="#"> LOGO HERE </a></div>
+			<div class="nav-menu" id="navmenu1"> CARA KERJA </div>
+			<div class="nav-menu" id="navmenu2"> TENTANG KAMI </div>
+			<div class="nav-menu" id="navmenu3"> BLOG </div>
+			<div class="nav-menu" id="navmenu4"> KALKEL </div>
+			<div id="nav-flag"> <img src="images/flag_indo.png"></div>
+			<div id="nav-button"><button type="button" class="btn btn-green" data-toggle="modal" data-target="#myModal"> DAFTAR </button> </div>
+			<div id="nav-button"><button type="button" class="btn btn-green-inverse" data-toggle="modal" data-target="#myModal2"> MASUK </button></div>
+		</div>
+</div>
+
+
+<!--SECTION DASHBORAD -->
+<div class="body-wrapper-dashboard">
+	<div class="content-dashboard">
+		<div class="row">
+			<div class="col-sm-3 nopadding" style="background-color: #ffffff">
+				<div class="picture-wrap">
+					<img src="images/img_avatar1.png" class="img-circle" >
+					<br><br>
+					<p> John Doe</p>
+				</div>
+				<br>
+				<div class="row-3-button">
+					<center>
+						<button type="button" class="btn btn-row-3-button"  data-toggle="tooltip" data-placement="bottom" title="Edit profil"><i class="fa fa-edit fa-2x" "></i></button>
+						<button type="button" class="btn btn-row-3-button" data-toggle="tooltip" data-placement="bottom" title="Buat kelas"><i class="fa fa-graduation-cap fa-2x"></i>
+							
+						</button>
+						<button type="button" class="btn btn-row-3-button" data-toggle="tooltip" data-placement="bottom" title="Buat Testimoni"><i class="fa fa-comments-o fa-2x"></i></button>
+					</center>
+				</div>
+				<br>
+				<a href="dashboard.html" style="text-decoration: none"><div class="sidebar_menu_dashboard smd_active"> <b><i class="fa fa-dashboard"></i> &nbsp Beranda saya </b></div></a>
+				<div class="sidebar_menu_dashboard " id="flip"> <b><i class="fa fa-user"></i>&nbsp &nbsp Profile saya &nbsp </b> <span style="padding-left: 50%"><i class="fa fa-chevron-down"></i></span>
+					<div id="panel" class="panel panel-class">
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Kelolah informasi </div></a>
+						<br>
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Saya peserta </div></a>
+						<br>
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Saya prof </div></a>
+						<br>
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Saya project officer </div></a>
+					</div>
+				</div>
+
+				<div class="sidebar_menu_dashboard " id="flip2"> <b><i class="fa fa-cog"></i>&nbsp &nbsp Pengaturan akun &nbsp </b> <span style="padding-left: 35%"><i class="fa fa-chevron-down"></i></span>
+					<div id="panel2" class="panel panel-class">
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Kelolah data saya </div></a>
+						<br>
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Validasi akun </div></a>
+						<br>
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Ganti password </div></a>
+						<br>
+					</div>
+				</div>
+
+				<div class="sidebar_menu_dashboard " id="flip3"> <b><i class="fa fa-money"></i> &nbsp Celengan saya </b><span style="padding-left: 43%"><i class="fa fa-chevron-down"></i></span>
+					<div id="panel3" class="panel panel-class">
+						<a href="celengan-saya.html" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Lihat Celengan </div></a>
+						<br>
+						<a href="tambah-celengan.html" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Tambah Celengan </div></a>
+						<br>
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Cairkan Dana </div></a>
+						<br>
+						<a href="#" style="text-decoration: none;color: #4d4d4d"><div style="width: 100%"> Another Menu</div></a>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="container container-white">
+					<p class="title-dashboard" > Pembayaran </p>
+					<div class="green-line"></div>
+					<br>
+					<b><h4>Nama Kelas : </h4></b>
+					<p>kelas Pelatihan Ms Word</p>
+					<hr>
+					<b><h4>Masukan Nomor HP Anda : </h4></b>
+					<input type="number" id="number" name="number" class="form-control">
+					<hr>
+					<b><h4>Pilih Metode Pembayaran : </h4></b>
+					<select name="metode" class="form-control">
+						<option value="ATM">ATM</option>
+						<option value="ATM">Debit</option>
+						<option value="ATM">Pulsa</option>
+						<option value="ATM">Celengan</option>
+					</select>
+					<hr>
+					<b><h4>Nominal pembayaran: </h4></b>
+					<input type="number" id="nominal" name="number" class="form-control">
+					<hr>
+					<b><h4>Pilih jenis pembayaran: </h4></b>
+					<div class="panel">
+						<i>Anda dapat ikut patungan jika anda ingin mengikuti kelas yang bersangkutan, dan anda juga dapat memilih donasi jika hanya ingin membantu terciptanya kelas tanpa ikut kelas tersebut</i>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-primary btn-lg" style="width: 100%"> Bayar sebagai Patungan</button>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-warning btn-lg" style="width: 100%"> Bayar sebagai Donasi</button>
+						</div>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+</div>
+<!-- END SECTION DASHBOARD -->
+
+
+<!--SECTION FOOTER-->
+	<div class="section" id="section-footer">
+		<div class="content-section">
+			<hr>
+			<div class="row">
+				<div class="col-sm-3">
+					<h2 style="color:#329666;font-family: Montserrat">Title1</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				</div>
+				<div class="col-sm-3">
+					<h2 style="color:#329666;font-family: Montserrat">Title1</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				</div>
+				<div class="col-sm-3">
+					<h2 style="color:#329666;font-family: Montserrat">Title1</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				</div>
+				<div class="col-sm-3">
+					<h2 style="color:#329666;font-family: Montserrat">Title1</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				</div>
+			</div>
+			<hr>
+			<center>
+				<i class="fa fa-facebook"></i> 
+				&nbsp &nbsp <span> <i class="fa fa-twitter"></i> </span>
+				&nbsp &nbsp <span> <i class="fa fa-instagram"></i> </span>
+
+			</center>
+		</div>
+	</div>
+	<!--END SCTION-->
+</body>
+</html>
