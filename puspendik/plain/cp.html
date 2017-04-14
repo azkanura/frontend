@@ -9,6 +9,9 @@
     <title></title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
+    <script src="js/modernizr.custom.63321.js"></script>
+
     <script src="js/cytoscape.min.js"></script>
     <script src="js/cytoscape-edgehandles.js"></script>
 </head>
@@ -24,6 +27,7 @@
       }
       .selected{
           margin:5px;
+          padding:2px;
           background-color: blue;
           border-radius:3px;
       }
@@ -32,20 +36,38 @@
           pointer-events:none;
       }
 
-      .save{
+      .save,.cancel{
         display: none;
+      }
+
+      .saved{
+        background-color: red;
+        padding:2px;
+        margin: 5px;
+        border-radius:3px;
       }
 
       #add{
         display: none;
       }
+
+      #submitQuestion{
+        display: none;
+      }
+
+      .input-puspendik,.cke_editor_cp,#cke_cp{
+        border-radius:6px;
+        box-shadow: 1px 1px 1px 1px #9C9C9C;
+        border-color: transparent;
+      }
+
     </style>
-    <section>
+    <section style="padding:50px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <textarea class="form-control" rows="5" id="cp"></textarea>
+                        <textarea class="form-control input-puspendik" rows="5" id="cp"></textarea>
                     </div>
                     <a class="btn btn-success" id="submit">Submit</a>
                     <p class="paragraph" id="par">
@@ -53,14 +75,28 @@
                     <h3>indikator</h3>
                     <div id="options">
                     </div>
-                    <a id="add" class="btn btn-primary">Add</a>
+                    <div class="form-group">
+                      <a id="add" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                  <a class="btn btn-warning" id="submitQuestion">Submit</a>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="preview">
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="js/wz_jsgraphics.js"></script> -->
+    <script src="js/jquery.dropdown.js"></script>
     <script type="text/javascript">
         $(function(){
           var submit = $('#submit');
@@ -68,9 +104,11 @@
           var words = [];
           var add = $('#add');
           var opt = $('#options');
-          var optNum = 3;
+          var optNum = 5;
           var optIdx = 0;
-          $('#submit').on('click',function(){
+          var optionArray = [];
+
+          submit.on('click',function(){
               var input = $('#cp').val().replace(/\r\n|\r|\n/g,"<br/>");
               words = input.split(" ");
               console.log(input);
@@ -78,7 +116,9 @@
                 par.append('<span class="selectable" idx="'+i+'">'+words[i]+'</span> ');
                 par.addClass('disabled');
               } 
-              $('#add').show();             
+              $('#add').show();    
+              $('#cp').hide();
+              $(this).hide();         
           });
 
           $(document).on('click','.selectable',function(){
@@ -88,7 +128,7 @@
             $(this).addClass('selected');
             var activeOptGroup = $('.opt-group.active');
             $('.opt-group.active .form-group:first-child .input-option').val($(this).text());
-            // activeOptGroup.children('.input-option').val($('.selected').text());
+            $('.opt-group.active').attr('word-idx',$(this).attr('idx'));
             console.log('berhasil');
           });
 
@@ -99,53 +139,265 @@
           });
 
           add.click(function(){
+              if(optIdx==0){
+                $('#submitQuestion').show();
+              }
               console.log(optIdx,optNum);
               var options ='';
               for(var i=0;i<optNum;i++){
-                options+='<div class="form-group"><input class="col-xs-1" type="radio" name="radio['+optIdx+']" opt-idx="'+optIdx+'" '+(i==0?'checked':'')+'><div class="col-xs-11"><input class="form-control input-option" disabled></div></div>';
+                options+='<div class="form-group"><input class="col-xs-1" type="radio" value="'+i+'" name="radio['+optIdx+']" opt-idx="'+optIdx+'" '+(i==0?'checked':'')+' disabled><div class="col-xs-11"><input class="form-control input-option" disabled required></div></div>';
               }
               var remove='<a class="btn btn-default remove pull-right" opt-idx="'+optIdx+'">remove</a>';
               var edit='<a class="btn btn-default edit pull-right" opt-idx="'+optIdx+'">edit</a>';
-              var save='<a class="btn btn-default save pull-right" opt-idx="'+optIdx+'">save</a>';
-              var actionBtn='<div class="row"><div class="col-xs-12">'+options+save+remove+edit+'</div></div>';
-              opt.append('<div class="row opt-group" id="optGroup['+optIdx+']" opt-idx="'+optIdx+'">'+actionBtn+'</div>');
+              var cancel='<a class="btn btn-default cancel pull-right" opt-idx="'+optIdx+'">cancel</a>';
+              var save='<a type="submit" class="btn btn-default save pull-right" opt-idx="'+optIdx+'">save</a>';
+              var actionBtn='<div class="row"><div class="col-xs-12">'+options+cancel+save+remove+edit+'</div></div>';
+              opt.append('<form id="form['+optIdx+']"><div class="row opt-group" id="optGroup['+optIdx+']" opt-idx="'+optIdx+'">'+actionBtn+'</div></form>');
               optIdx++;
           });
 
           $(document).on('click','.edit',function(){
-            par.removeClass('disabled');
             var parent = $(this).parents('.opt-group');
-            var parentSibling = parent.siblings('.opt-group');
-            parentSibling.removeClass('active');
-            parentSibling.find('.save').hide();
-            parentSibling.find('.edit').show();
-            parentSibling.find('.remove').show();
+            var radio = parent.find('input[type="radio"]');
+            var parentSibling = parent.parents('form').siblings().find('.opt-group.active');
+            console.log(parentSibling);
+            var save = parentSibling.find('.save');
+            console.log(canSave(save));
 
-            parentSibling.find('.input-option').attr('disabled',true);
-            parent.find('.input-option').attr('disabled',false);
+            if(!canSave(save).empty){
+              if(parentSibling.length){
+                if(canSave(save).wordIdx){
+                  save.click();
+                  par.removeClass('disabled');
+                  var wordIdx = parent.attr('word-idx');
 
-            parent.addClass('active');
-            $(this).hide();
-            $(this).siblings('.remove').hide();
-            $(this).siblings('.save').show();
+                  $('span[idx="'+wordIdx+'"]').removeClass('disabled');
+                  $('span[idx="'+wordIdx+'"]').removeClass('saved');
+                  $('span[idx="'+wordIdx+'"]').addClass('selectable');
+
+                  parent.find('.input-option').attr('disabled',false);
+                  radio.attr('disabled',false);
+
+                  parent.addClass('active');
+                  $(this).hide();
+                  $(this).siblings('.remove').hide();
+                  $(this).siblings('.save').show();
+                  $(this).siblings('.cancel').show();
+                }
+                else{
+                  alert('pilih kata terlebih dahulu!');
+                }
+              }
+              else{
+                  par.removeClass('disabled');
+                  var wordIdx = parent.attr('word-idx');
+
+                  $('span[idx="'+wordIdx+'"]').removeClass('disabled');
+                  $('span[idx="'+wordIdx+'"]').removeClass('saved');
+                  $('span[idx="'+wordIdx+'"]').addClass('selectable');
+
+                  parent.find('.input-option').attr('disabled',false);
+                  radio.attr('disabled',false);
+
+                  parent.addClass('active');
+                  $(this).hide();
+                  $(this).siblings('.remove').hide();
+                  $(this).siblings('.save').show();
+                  $(this).siblings('.cancel').show();
+              }
+            }
+
+            else{
+              alert('lengkapi semua jawaban terlebih dahulu!')
+            }
+
+
           });
 
           $(document).on('click','.save',function(){
-            console.log('hahuha');
-            par.addClass('disabled');
-            var parent = $(this).parents('.opt-group');
-            parent.find('.input-option').attr('disabled',true);
 
+              var parent = canSave($(this)).parent;
+              var inputOption = canSave($(this)).inputOption;
+
+              var wordIdx =canSave($(this)).wordIdx;
+
+              var empty = canSave($(this)).empty;
+              var radio = parent.find('input[type="radio"]');
+
+              if(wordIdx){
+                if(!empty){
+                  par.addClass('disabled');
+                  inputOption.attr('disabled',true);
+                  radio.attr('disabled',true);
+                  parent.removeClass('active');
+                  $(this).hide();
+                  $(this).siblings('.cancel').hide();
+                  $(this).siblings('.edit').show();
+                  $(this).siblings('.remove').show();
+
+                  var options = [];
+                  var optIdx = parseInt(parent.attr('opt-idx'));
+                  var answerIdx = parseInt(parent.find('input[name="radio['+optIdx+']"]:checked','#form['+optIdx+']').val());
+
+                  inputOption.each(function(){
+                    options.push($(this).val());
+                  });
+
+                  var optionGroup = {options:options,wordIdx:wordIdx,answerIdx:answerIdx,optIdx:optIdx};
+                  insertOptionToArray(optionGroup,optionArray);
+                  $('span[idx="'+wordIdx+'"]').removeClass('selected');
+                  $('span[idx="'+wordIdx+'"]').addClass('disabled');
+                  $('span[idx="'+wordIdx+'"]').addClass('saved');
+                }
+
+                else{
+                  alert('lengkapi semua pilihan jawaban terlebih dahulu!');
+                }
+              }
+
+              else{
+                alert('pilih kata terlebih dahulu');
+              }
+
+              console.log(optionArray);
+
+
+          });
+
+          $(document).on('click','.cancel',function(){
+
+            var parent = $(this).parents('.opt-group');
+            var inputOption = parent.find('.input-option');
+            var radio = parent.find('input[type="radio"]');
+            var optIdx = parseInt($(this).attr('opt-idx'));
+            var wordIdx = parent.attr('word-idx');
+            if(wordIdx){
+              par.find('span[idx="'+wordIdx+'"]').removeClass('selected').addClass('selectable');
+            }
+
+            if(doesIdxExist(optIdx,optionArray).exist){
+              var idx=doesIdxExist(optIdx,optionArray).idx;
+              var optionGroup=optionArray[idx];
+              parent.attr('word-idx',optionGroup.wordIdx);
+              par.find('span[idx="'+optionGroup.wordIdx+'"]').addClass('disabled saved');
+              answerIdx=optionGroup.answerIdx;
+              parent.find('input[type="radio"][value="'+answerIdx+'"]').attr('checked',true).click();
+
+              console.log('radio');
+              inputOption.each(function(index,value){
+                $(this).val(optionGroup.options[index]);
+              });
+            }
+
+            else{
+              parent.find('input[type="radio"][value="0"]').attr('checked',true).click();
+              console.log('radioioio');
+              parent.attr('word-idx','');
+              inputOption.each(function(){
+                $(this).val('');
+              });
+            }
+
+            par.addClass('disabled');
+            inputOption.attr('disabled',true);
+            radio.attr('disabled',true);
             parent.removeClass('active');
             $(this).hide();
+            $(this).siblings('.save').hide();
             $(this).siblings('.edit').show();
             $(this).siblings('.remove').show();
+
+
           });
 
           $(document).on('click','.remove',function(){
-              $(this).parents('[opt-idx="'+$(this).attr('opt-idx')+'"]').hide();
+              var parent=$(this).parents('[id="form['+$(this).attr('opt-idx')+']"]');
+              var optGroup=parent.find('.opt-group');
+              var wordIdx =parseInt(optGroup.attr('word-idx'));
+              if(wordIdx){
+                if(doesWordIdxExist(wordIdx,optionArray).exist){
+                  optionArray.splice(doesWordIdxExist(wordIdx,optionArray).idx,1);
+                  par.find('[idx="'+wordIdx+'"]').removeClass('saved disabled selected').addClass('selectable');
+                  console.log(optionArray);
+                }
+              }
+              parent.remove();   
           });
 
+
+          $('#submitQuestion').on('click',function(){
+
+              if(optionArray.length==$('.opt-group').length){
+                var previewQuestion = '';
+                for(var i=0;i<words.length;i++){
+                    if(doesWordIdxExist(i,optionArray).exist){
+                      var optionGroup = optionArray[doesWordIdxExist(i,optionArray).idx];
+                      var optionSelect = '';
+                      for(var j=0;j<optionGroup.options.length;j++){
+                        optionSelect+='<option>'+optionGroup.options[j]+'</option>';
+                      }
+                      previewQuestion+='<select style="display:inline;width:auto;margin:5px" idx="['+i+']">'+optionSelect+'</select>';
+                    }
+                    else{
+                      previewQuestion+='<span idx="['+i+']">'+words[i]+' </span>';
+                    }
+                }
+
+                $('#preview').append(previewQuestion);
+                $('#options').hide();
+                $('#add').hide();
+                $(this).hide();
+              }
+              else{
+                alert('Lengkapi semua pilihan jawaban terlebih dahulu');
+              }
+
+
+          });
+
+          function canSave(element){
+
+              var parent = element.parents('.opt-group');
+              var inputOption = parent.find('.input-option');
+
+              var wordIdx = parseInt(parent.attr('word-idx'));
+
+              var empty = false;
+
+              inputOption.each(function(){
+                empty = empty || ($(this).val()=='');
+              });
+
+              return {parent:parent,inputOption: inputOption,wordIdx:wordIdx,empty:empty};
+          }
+
+          function insertOptionToArray(optionGroup,optionArray){
+            if(doesIdxExist(optionGroup.optIdx,optionArray).exist){
+              var idx = doesIdxExist(optionGroup.optIdx,optionArray).idx;
+              optionArray[idx] = optionGroup;
+            }
+            else{
+              optionArray.push(optionGroup);
+            }
+          }
+
+          function doesIdxExist(optIdx,optionArray){
+            for(var i=0;i<optionArray.length;i++){
+              if(optionArray[i].optIdx==optIdx){
+                return {exist: true, idx:i };
+              }
+            }
+            return {exist: false, idx: -1};
+          }
+
+          function doesWordIdxExist(wordIdx,optionArray){
+            for(var i=0;i<optionArray.length;i++){
+              if(optionArray[i].wordIdx==wordIdx){
+                return {exist: true, idx:i };
+              }
+            }
+            return {exist: false, idx: -1};
+          }
 
         });
 
