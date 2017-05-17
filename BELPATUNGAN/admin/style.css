@@ -1,0 +1,15 @@
+/* TABLE SECTION */
+.table.primary-thead
+{
+	color: #ffffff;
+	background-color: #337ab7 !important;
+}
+
+
+/*CONTAINER */
+.container.container-blue
+{
+	padding: 20px;
+	border-top: 3px solid #337ab7;
+	background-color: #ffffff;
+}

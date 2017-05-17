@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/cytoscape.min.js"></script>
+    <script src="js/cytoscape-edgehandles.js"></script>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <textarea id="cp"></textarea>
+                    </div>
+                    <a class="btn btn-success" id="submit">Submit</a>
+                    <p class="paragraph" id="phar">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/wz_jsgraphics.js"></script> -->
+    <script type="text/javascript">
+        $(function(){
+          var submit = $('#submit');
+          var input = $('#cp');
+          var phar = $('#phar');
+          var words = [];
+          $('#submit').on('click',function(){
+              words = input.split(" ");
+              for(var i=0; i<words.length; i++){
+                phar.append('<span class="selectable">'+words[i]+' </span>');
+              }
+          });
+        });
+    </script>
+</body>
+</html>
