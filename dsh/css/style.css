@@ -165,7 +165,7 @@ body {
 }
 
 .bg_secondary{
-  background: #505050;
+  background: #012D54;
 }
 .bg_primary,.bg_secondary{
   background-position: center;
@@ -241,12 +241,19 @@ body {
   text-align: center;
   margin-bottom: 15px;
 }
+
+.card.transparent{
+  background-color: transparent;
+}
 .card_header{
   padding: 0
 }
 .icon_container{
   padding: 30px;
-  border-bottom:1px solid #ddd;
+  border-bottom:1px solid #999;
+}
+.icon_container-narrow{
+  padding:15px;
 }
 
 .card_img{
@@ -264,21 +271,42 @@ body {
   margin: auto;
 }
 
+.service_container:hover{
+  text-decoration: none;
+
+}
+.services{
+  margin-bottom:20px;
+}
+.service{
+  background-image: url('../img/bg_service_1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 3px 3px 3px -3px #666;
+}
+
 .card_body{
   padding:10px 20px;
   font-size: 18px;
-  color:#707070;
-  /*text-transform: capitalize;*/
+  color:#012D54;
+  text-transform: capitalize;
   font-weight: 600;
-  text-transform: uppercase;
-  min-height: 3em;
+  /*text-transform: uppercase;*/
+  min-height: 2em;
   /*font-weight: bold;*/
 }
 
 .card_footer{
   padding:10px 20px 30px 20px;
   font-size: 16px;
-  color: #606060;
+  font-style: italic;
+  color: #737373;
+
 }
 .bg_light-grey{
   background: #eee;
