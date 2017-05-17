@@ -3,6 +3,39 @@
 }
 
 .hero_img{
-	height:200px;
-	width: auto;
+	width:80%;
+	display: block;
+}
+
+.header{
+	padding-top: 140px;
+	padding-bottom: 240px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	background-image: url('../img/bg_header_half_curve.png');
+	color:#fff;
+}
+
+/*versi lurus*/
+/*.header{
+	padding-top:180px;
+	padding-bottom: 80px;
+	background-image: url('../img/bg_header_half_2.jpg');
+	
+}*/
+
+@media ( max-width: 767px){
+	.hero_img_container{
+		padding-top:0;
+	}
+	.hero_img{
+		margin: 20px auto;
+	}
+	.header{
+		text-align: center;
+		padding-bottom: 80px;
+		background-image: url('../img/bg_header_half.jpg');
+	}
 }

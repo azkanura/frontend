@@ -1,1 +1,11 @@
 color.txt
+
+green
+#00AC93
+
+blue
+#012D54
+
+grey
+#666
+#737373
