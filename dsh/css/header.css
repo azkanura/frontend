@@ -19,12 +19,21 @@
 }
 
 /*versi lurus*/
-/*.header{
+.header{
 	padding-top:180px;
 	padding-bottom: 80px;
 	background-image: url('../img/bg_header_half_2.jpg');
 	
-}*/
+}
+
+.header_profile{
+	background-image: url('../img/bg_header_half.jpg');
+  	height:308px;
+}
+
+.info_profile_container h3{
+	font-style: italic;
+}
 
 @media ( max-width: 767px){
 	.hero_img_container{
@@ -37,5 +46,39 @@
 		text-align: center;
 		padding-bottom: 80px;
 		background-image: url('../img/bg_header_half.jpg');
+	}
+	.header_profile{
+	    padding-top: 80px;
+	    height: auto;
+	    padding-bottom: 30px;
+	}
+
+	.info_profile_container{
+		padding:0;
+	}
+
+	.info_profile_container h2{
+		margin:10px 0;
+		font-size: 1.5em;
+	}
+
+
+	.info_profile_container h3{
+		margin:10px 0;
+		font-size: 1.25em;
+	}
+
+
+	.info_profile_container h4{
+		margin:10px 0;
+		font-size: 1em;
+	}
+
+	.profile_social {
+	    position: relative;
+	    bottom: 0; 
+	    display: block;
+	    width: 100%;
+	    margin: auto;
 	}
 }
