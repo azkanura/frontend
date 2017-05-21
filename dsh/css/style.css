@@ -845,6 +845,10 @@ footer a:hover .footer_content{
   margin-top:30px;
 }
 
+.experience:last-child hr{
+  border:none;
+}
+
 .profile_position{
   color: #012D54;
   font-weight: 500;
