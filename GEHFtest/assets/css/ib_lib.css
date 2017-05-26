@@ -1,0 +1,79 @@
+/*
+ * Copyright (c) 2015-2016. Docentron PTY LTD. All rights reserved.
+ * This material may not be reproduced, displayed, modified or distributed without
+ * the express prior written permission of the copyright holder.
+ */
+.carousel-caption h2{
+    color:#ffffff!important;
+    font-size: 20px;
+}
+
+.btn-ib-header{
+    margin-left: -10px;
+}
+
+.ib-page:after {
+    font-size: 8pt;
+    content:"Powered by Docentron. \00a9  2015 - 2016 Docentron PTY LTD.";
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-ib{
+    text-align: left;
+}
+.navbar-ib-logo{
+    padding-left: 70px;
+}
+.gif-loader{
+    background:url(../../assets/images/ajax-loader.gif) no-repeat center;
+    display:none;
+    height:40px;
+}
+
+a {
+    color: #0645ad;
+}
+
+/* visited link */
+a:visited {
+    color: #0b0080;
+}
+
+.ibChatTextInput {
+    border: solid 1px black;
+}
+
+@-webkit-keyframes blink {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+.credit-blink {
+    -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: 2;
+    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+    -webkit-animation-duration: 0.5s;
+}
+.jrn-credit {
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+
+.sbj-author-name {
+    font-weight: bold;
+}
+
+.odometeram {
+    cursor:pointer;
+    height:34px !important;
+    margin-top:5px;
+}
+
+.odometer {
+    cursor:pointer;
+    height:34px !important;
+}
