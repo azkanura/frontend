@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2015. Docentron PTY LTD. All rights reserved.
+This material may not be reproduced, displayed, modified or distributed without
+the express prior written permission of the copyright holder.
+No part of this file or any derived works can be distributed without written permission from the copyright holder.
+-->
+<html>
+<head itemscope itemtype="http://schema.org/WebSite">
+    <!-- Docentron: Do not change any of these files --->
+    <meta charset="utf-8">
+    <meta id="mauthor" name="author" content="Docentron PTY LTD">
+    <meta id="mkeywords" name="keywords" content="education, mobile education, messaging, learning, teaching, online learning, learning adventure">
+    <meta id="mdescription" name="description" content="Docentron Game">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title itemprop="name">Docentron Game</title>
+    <link id="mclink" rel="canonical" href="https://www.a.kopo.com/wp/me/">
+
+    <!-- Docentron: Do not change any of these files --->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap_theme.css" rel="stylesheet">
+
+    <link href="../assets/css/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/navmenu.css" rel="stylesheet">
+
+    <!-- Docentron: Do not change any of these files --->
+    <link href="../assets/css/ib_lib.css" rel="stylesheet">
+
+    <script>
+        // Do not change this
+        var session_key = "";
+        window["dc_api_key"] = "g_v142_FjOUFL208jflJ";
+    </script>
+
+    <!-- You can add any free third party add-ons --->
+    <script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jasny-bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/phaser/phaser.min.js"></script>
+
+    <!-- Docentron game API --->
+    <script type="text/javascript" src="https://a.kopo.com/ws/ws/apiauth/get_au.php?api-key=g_v141_FjoUjfwi11797"></script>
+
+    <!-- Game specific --->
+    <link href="assets/css/game.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/lib/ib_game.js"></script>
+    <script type="text/javascript" src="assets/lib/app_class.js"></script>
+    <script type="text/javascript" src="assets/lib/app.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/images/kopo_favicon.png">
+</head>
+
+
+<body>
+<div class="navbar navbar-default navbar-fixed-top navbar-ib" style="background-color: darkslategray;">
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand navbar-ib-logo" href="./" style="display: none;"><span></span>
+        <img style="margin-top: 3px" src="../assets/images/kopo_logo100px.png"/>
+    </a>
+
+    <!--div class="top_menu pull-right" id="top_menu"></div-->
+    <div class="navbar-header" id="chat-header-mobile" style="margin-left: 62px; margin-top: 8px;">
+        <button type="button" class="btn btn-warning ibBackBtn"><span class="glyphicon glyphicon-arrow-left" style="margin-left: 3px; margin-right: 0;"></span>&nbsp;</button>
+        <button type="button" class="btn btn-primary msg-journey-btn" title="Some button" style="display: none"><span class="glyphicon glyphicon-th-large" style="margin-left: 3px; margin-right: 0;"></span>&nbsp;</button>
+        <span class="nav_game_title" style="max-width: 30px; color: white;">Collect Them All</span>
+    </div>
+
+</div>
+
+<div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm">
+    <a class="navmenu-brand visible-md visible-lg" href="./"><img src="../assets/images/kopo_logo100px.png" /></a>
+    <ul class="nav navmenu-nav" id="sidenav">
+        <li class="active" id="nav-play_game_level">
+            <a href="javascript:void(0);">
+                <span class="glyphicon glyphicon-play"></span>
+                <span id="nav-game_play_level-label"> Play</span></a>
+        </li>
+        <li class="" id="nav-pause_game">
+            <a href="javascript:void(0);">
+                <span class="glyphicon glyphicon-pause"></span>
+                <span id="nav-pause_game-label"> Pause</span></a>
+        </li>
+        <li class="" id="nav-restart_game">
+            <a href="javascript:void(0);">
+                <span class="glyphicon glyphicon-repeat"></span>
+                <span id="nav-restart_game-label"> Restart</span></a>
+        </li>
+        <li class="" id="nav-exit">
+            <a href="javascript:void(0);">
+                <span class="glyphicon glyphicon-off"></span>
+                <span id="nav-exit-label"> Exit</span></a>
+        </li>
+    </ul>
+</div>
+
+<div class="container" style="padding: 0; margin: 0;">
+
+    <div id="page-game_container" class="ib-page">
+        <div class="panel panel-primary" style="position:fixed; width:100% !important; z-index:1000; margin-top: -6px; display: none;">
+            <div class="panel-heading">
+                <button type="button" class="btn btn-warning btn-ib-header ibBackBtn">Back</button>
+                Meet the words: Maze Game
+            </div>
+        </div>
+
+        <div class="panel-body2" id="page-body-game_container" style="padding-top: 0px;">
+            <div id="game_stage_one">
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
