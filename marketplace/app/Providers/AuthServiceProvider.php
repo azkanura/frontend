@@ -26,5 +26,8 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         //
+        Gate::define('admin', function($user, $class, $roles) {
+        return app( '\Aimeos\Shop\Base\Support' )->checkGroup( $user->id, $roles );
+        });
     }
 }

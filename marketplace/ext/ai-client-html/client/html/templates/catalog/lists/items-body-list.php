@@ -4,7 +4,7 @@
  * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
  * @copyright Aimeos (aimeos.org), 2016
  */
-// $base_url = 'http://localhost:8008/frontend/marketplace/public/';
+
 $enc = $this->encoder();
 $position = $this->get( 'itemPosition' );
 

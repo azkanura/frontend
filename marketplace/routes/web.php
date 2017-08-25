@@ -6,10 +6,6 @@ Route::match( array( 'GET', 'POST' ), '/', array(
 ));
 
 
-// Route::match( array( 'GET', 'POST' ), 'login', array(
-// 	'as' => 'login',
-// 	'uses' => 'Auth\LoginController'
-// ));
 
 Route::group(config('shop.routes.login', ['middleware' => ['web']]), function() {
 
@@ -255,3 +251,7 @@ Route::get('privacy', array(
 	'as' => 'aimeos_shop_privacy',
 	'uses' => 'Aimeos\Shop\Controller\PageController@privacyAction'
 ));
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

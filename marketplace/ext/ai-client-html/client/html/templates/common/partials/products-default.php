@@ -15,6 +15,7 @@
  * - itemprop : Schema.org property for the product items (optional)
  * - position : Position is product list to start from (optional)
  */
+
 $enc = $this->encoder();
 $position = $this->get( 'position' );
 $productItems = $this->get( 'productItems', [] );
