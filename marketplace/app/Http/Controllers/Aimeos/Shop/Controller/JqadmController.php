@@ -250,13 +250,16 @@ class JqadmController extends AdminController
 		$site = Route::input( 'site', Input::get( 'site', 'default' ) );
 		$lang = Input::get( 'lang', config( 'app.locale', 'en' ) );
 		$resource = Route::input( 'resource' );
+		// $resource = 'catalog';
 
 		$aimeos = app( '\Aimeos\Shop\Base\Aimeos' )->get();
 		$templatePaths = $aimeos->getCustomPaths( 'admin/jqadm/templates' );
 
 		$context = app( '\Aimeos\Shop\Base\Context' )->get( false, 'backend' );
 		$context->setI18n( app('\Aimeos\Shop\Base\I18n')->get( array( $lang, 'en' ) ) );
-		$context->setLocale( app('\Aimeos\Shop\Base\Locale')->getBackend( $context, $site ) );
+		$context->setLocale( app('\Aimeos\Shop\Base\Locale')->getBackend( $context, $site, $lang ) );
+		// $context->setView( app( '\Aimeos\Shop\Base\View' )->create( $context, $templatePaths, $lang ) );
+
 		$context->setView( app( '\Aimeos\Shop\Base\View' )->create( $context, $templatePaths, $lang ) );
 
 		return \Aimeos\Admin\JQAdm\Factory::createClient( $context, $templatePaths, $resource )->setAimeos( $aimeos );
