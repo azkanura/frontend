@@ -21,6 +21,16 @@ var helperFunctions = require('./helpers/helperFunctions');
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json.
 app.use(bodyParser.json());
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
+
+  //and remove cacheing so we get the most recent comments
+  res.setHeader('Cache-Control', 'no-cache');
+  next();
+});
 
 //connedting to mongoDB
 mongoose.connect('mongodb://'+configs.dbHost+'/'+configs.dbName);
@@ -33,7 +43,8 @@ routes(app);
 // serve video files.
 app.use('/videos',express.static('videos'));
 // serve client side code.
-app.use('/',express.static('client'));
+// app.use('/',express.static('public'));
+// app.use('/',express.static('client'));
 
 //Finally starting the listener
 app.listen(configs.applicationPort, function () {

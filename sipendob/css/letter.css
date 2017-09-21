@@ -1,0 +1,315 @@
+	@font-face{
+		font-family: Barcode;
+		src: url(../fonts/barcode/Code-39-Logitogo.ttf);
+	}
+
+	@font-face{
+		font-family: Bookman;
+		src: url(../fonts/bookman/BOOKOS.TTF);
+
+	}
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		background-color:#eee;
+	}
+	p,p *,ol, table{
+		font-size: 12pt;
+		line-height: 1.5em;
+	}
+	p{
+		text-align: justify;
+	}
+
+
+	.card{
+		position: relative;
+	}
+
+	.letter{
+		padding: 75px 96px 140px 96px;
+		/*font-size: 16px;*/
+		/*width: 780px;*/
+		background: #fff;
+		display: block;
+		margin:0 auto;
+		/*position: relative;*/
+		color: #111;
+		font-family: Arial;
+
+	}
+
+	.letter.sk.sk-lampiran{
+		padding: 40px 40px 100px 40px;
+	}
+
+	.letter.sk{
+		font-family: Bookman;
+	}
+
+
+	.letter hr{
+		margin-top: 0;
+		margin-bottom: 20pt;
+		border-bottom: 2pt solid #333;
+	}
+	.letter_head,.letter_content-title,.letter_content-caption{
+		text-align:center;
+	}
+	.letter_head{
+		display: inline-block;
+		width:100%;
+		/*float: none;*/
+	}
+	.letter_head-logo,.letter_head-text{
+		display:inline-block;
+	}
+
+	.letter_head-logo{
+		width: 13%;
+		float: left;
+	}
+
+	.letter_head-logo>img{
+		width:100%;
+	}
+
+	.letter_head-text{
+		width: 87%;
+		float: right;
+		padding-left:10px;
+	}
+
+	.letter.sk .letter_head-logo,
+	.letter.sk .letter_head-text{
+		display: block;
+		float: none;
+		margin: 20px auto;
+	}
+
+	.letter.sk .letter_head-logo{
+		width: 12%;
+	}
+
+	.letter_head-title{
+		padding:0;
+		margin:0;
+		font-size:20pt;
+		font-weight: bold;
+	}
+	.letter.sk .letter_head-title{
+		font-size: 14pt;
+		font-weight: bolder;	
+	}
+	.letter_head-caption{
+		margin:5px 0 10px 0;
+		font-size: 11pt;
+		font-weight: normal;
+
+	}
+
+	.letter_content-title{
+		text-decoration: underline;
+		margin:0;
+		font-size:18pt;
+		text-align: center;
+		font-weight:bold;
+
+	}
+	.letter_content-caption{
+		margin-top:0;
+		font-size: 13pt;
+		text-align: center;
+		font-weight:bold;
+	}
+
+	.letter.sk .letter_content-caption{
+		font-weight:normal;
+	}
+
+	.letter_content .letter_top_date{
+		float: right;
+		padding: 0;
+		margin: 0;
+		top: -8px;
+		position: relative;
+	}
+	.letter_content table{
+		padding:20px;
+		margin: 10px 0 30px 60px;
+	}
+	.letter_content tr>td:nth-child(2){
+		min-width: 15px;
+	}
+	.letter_content table.no-padding{
+		padding:0;
+		margin: 0;
+	}
+	.letter_content .table-dashed{
+		border: 1px dashed #ddd;
+	}
+	.letter_content .table-dashed tr>td{
+		border: 1px dashed #ddd;
+	}
+	.letter_content .table-outline{
+		border: 1px solid #666;
+	}
+	.letter_content .table-outline tr>td{
+		border: 1px solid #666;
+	}
+	.letter.sk table tr>td{
+		text-align: justify;
+	}
+	.letter.sk table tr>td.text-center{
+		text-align: center;
+	}
+	.letter.sk table tr>td:first-child{
+		width: 120px;
+	}
+	.letter.sk table tr>td:nth-child(2){
+		width: 20px; 
+	}
+	.letter.sk table tr>td:nth-child(3){
+		width: 30px; 
+	}
+	.letter.sk table tr>td:last-child{
+		width: auto;
+	}
+	.letter_content table tr>td{
+		vertical-align: top;
+	}
+	.letter_content table tr>td:first-child{
+		width:220px;
+	}
+	.letter_content ol{
+		padding-left: 15px;
+	}
+
+	.letter_footer{
+	    display: block;
+	    min-height: 180px;
+	    float: none;
+	    position: relative;
+	}
+
+	.letter_footer p{
+		display: inline-block;
+    	float: right;
+    	position: relative;
+	}
+
+	.letter_footer-sign{
+		width: 320px;
+    	position: absolute;
+    	right: 74px;
+    	top: 10px;
+	}
+
+	.footnote{
+		font-size: 10pt;
+		margin-top: 100px;
+	}
+
+	.letter.sk .footnote{
+		font-size: 12pt;
+		margin-top: 160px;
+	}
+
+	.barcode_container{
+		position: absolute;
+		right:10px;
+		top:10px;
+		width: 200px;
+		display: inline-block;
+	}
+	.barcode{
+		font-family: Barcode;
+		font-size:18pt;
+		text-align: center;
+	}
+	.barcode_text{
+		font-size: 8pt;
+		text-align: center;
+	}
+
+	.transparent{
+		color:#fff;
+	}
+
+	.text-center{
+		text-align: center;
+	}
+
+	.text-right{
+		text-align: right;
+		float: right;
+		display: inline-block;
+	}
+
+	.text-left{
+		text-align: left;
+	}
+	.pull-right{
+		float: right;
+	}
+	#marginTop{
+		height: 280px;
+		display: none;
+		position: relative;
+	}
+
+	table tr{
+		margin-top: 200px;
+	}
+
+	@media print{
+		.letter{
+			margin-top: -100px;
+		}
+
+		.letter.sk{
+			margin-top: 40px;
+		}
+
+		.letter.sk .letter_footer{
+			margin-top:0;
+			padding-top: 0;
+		}
+
+		.barcode_container{
+			top:0px;
+		}
+
+		.transparent{
+			color:#fff;
+			visibility: hidden;
+		}
+
+		.header{
+			position: fixed;
+			top:20px;
+			margin: 0 auto;
+			left:0px;
+			width: 100%;
+		}
+
+		#marginTop{
+			display: block;
+			page-break-before: always;
+		}
+
+		#tableSplit{
+			margin-bottom: 120px;
+		}
+
+		@page{
+			size: portrait;
+	  		margin: 0mm;
+		}
+
+/*		html,body{
+			width: 210mm;
+			height: 297mm;
+		}*/
+	}
